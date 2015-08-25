@@ -1,0 +1,20 @@
+// calculate font size in Rems and provide fallback
+
+@function rem($size) {
+  $rem-size: $size / 16px;
+  @return $rem-size * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: rem($size);
+}
+
+
+
+// hidden
+
+.hidden {
+
+}
+

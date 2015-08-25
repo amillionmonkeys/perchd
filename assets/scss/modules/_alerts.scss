@@ -1,0 +1,69 @@
+%alert {
+	background: red;
+}
+
+.alert--success,
+.alert--info,
+.alert--warning,
+.alert--danger {
+	@extend %alert
+}
+
+// Colours should be defined as variables
+
+$white: #fff;
+
+$success: $green;
+$info: $blue;
+$warning: $orange;
+$danger: $red;
+
+$alert--success: $success;
+$alert--info: $info;
+$alert--warning: $warning;
+$alert--danger: $danger;
+
+
+%alert {
+	color: $white;
+	text-align: center;
+	padding: 0.5em;
+	margin: 0.5em 0;
+}
+
+.alert {
+	@extend %alert;
+	&--success {
+		border: 1px solid $alert--success;
+		background-color: lighten($alert--success, 15%);
+	}
+	&--info {
+		border: 1px solid $alert--info;
+		background-color: lighten($alert--info, 15%);
+	}
+	&--warning {
+		border: 1px solid $alert--warning;
+		background-color: lighten($alert--warning, 15%);
+	}
+	&--danger {
+		border: 1px solid $alert--danger;
+		background-color: lighten($alert--danger, 15%);
+	}
+}
+
+// @mixin alert-color($variable) {
+// 	@each $variable in success, info, warning, danger {
+// 	&--#{$variable} {
+// 		background-color: $alert--#{$variable};
+// 	}
+// }
+// }
+
+// .alert {
+// 	@extend %alert;
+// 	@include alert-color(success info warning danger)
+// }
+
+
+
+

@@ -1,0 +1,7 @@
+
+header h1 {
+	@include font-size(22px);
+	a {
+		text-decoration: none;
+	}
+}

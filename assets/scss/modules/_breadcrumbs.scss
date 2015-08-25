@@ -1,0 +1,18 @@
+.breadcrumbs {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.breadcrumbs li {
+	display: inline;
+	padding-right: 0.5em;
+	&:after {
+		content: ">";
+		padding-left: 0.5em;
+	}
+	&:last-child:after {
+		content: "";
+	}
+
+}
+

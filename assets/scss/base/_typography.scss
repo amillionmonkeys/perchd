@@ -1,0 +1,84 @@
+body {
+  @include font-feature-settings("kern", "liga", "pnum");
+  -webkit-font-smoothing: antialiased;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: $base-font-size;
+  line-height: $heading-line-height;
+  margin-bottom: $small-spacing;
+}
+
+h1 {
+  font-family: $heading-font-family;
+  @include font-size($h1-small-screen);
+  @include media($gt-small){
+    @include font-size($h1-size);
+    font-weight: 400;
+  }
+}
+h2 {
+  @include font-size($h2-small-screen);
+  @include media($gt-small){
+    @include font-size($h2-size);
+    font-weight: 300;
+  }
+}
+h3 {
+  @include font-size($h3-small-screen);
+  @include media($gt-small){
+    @include font-size($h3-size);
+    font-weight: 300;
+  }
+}
+h4 {
+  @include font-size($h4-small-screen);
+  @include media($gt-small){
+    @include font-size($h4-size);
+  }
+}
+h5 {
+  @include font-size($h5-small-screen);
+  @include media($gt-small){
+    @include font-size($h1-size);
+  }
+}
+
+p {
+  margin-bottom: $small-spacing;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  transition: color 0.1s linear;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: inherit;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $base-spacing 0;
+}
+
+
