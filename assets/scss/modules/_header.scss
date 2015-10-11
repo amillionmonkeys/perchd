@@ -1,0 +1,20 @@
+.main-header {
+	  border-bottom: 1px solid $light-gray;
+	  @include clearfix();
+}
+
+.logo {
+	@include media($gt-medium){
+		float:left;
+	}
+}
+
+.main-nav {
+	@include media($gt-medium){
+		float:right;
+	}
+}
+
+.post-header h2 {
+	margin-top: 0;
+}

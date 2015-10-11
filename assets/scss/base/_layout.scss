@@ -1,0 +1,40 @@
+.outer-container {
+	padding: 0 1em;
+	@include media($gt-small) {
+		@include outer-container;
+	}
+}
+
+.row {
+	@include media($gt-small) {
+		@include row;
+	}
+}
+
+.main-content {
+	@include media($gt-small) {
+		@include span-columns(8);
+	}
+}
+
+.sidebar {
+	@include media($gt-small) {
+		@include span-columns(4);
+	}
+}
+
+.footer__column {
+	@include media($gt-small) {
+		@include span-columns(4);
+	}
+}
+
+.half-width {
+	@include media($gt-small) {
+		@include span-columns(6);
+	}
+}
+
+.clearfix {
+	@include clearfix();
+}

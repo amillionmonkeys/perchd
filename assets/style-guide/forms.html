@@ -1,0 +1,192 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Forms</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/assets/bower_components/normalize-css/normalize.css">
+        <link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style-guide.css">
+        <script src="/assets/bower_components/modernizr/modernizr.js"></script>
+    </head>
+    <body class="style-guide">    
+    <header>
+        <nav role="navigation">
+            <ol class="breadcrumbs">
+                <li><a href="/assets/style-guide/">Style Guide</a></li>
+                <li><a href="/assets/style-guide/forms.html">Forms</a></li>
+            </ol>
+        </nav>
+        <h1>Forms</h1>
+    </header>
+
+    <main>
+        <form>
+            <h2>Standard Form</h2>
+            <fieldset>
+                <legend>Legend</legend>
+                <p><small class="caption">Required fields are marked <abbr title="Required">*</abbr></small></p>
+            </fieldset>
+            <div class="form-group">
+	<label for="text">Text Input <abbr title="Required">*</abbr></label>
+	<input id="text" class="input" type="text" required/>
+	<small class="caption">Note about this field</small>
+</div>            <div class="form-group">
+	<div class="input-group">
+		<input type="text" class="input" placeholder="Search for...">
+		<span class="input-group-button">
+			<button class="button" type="button">Go!</button>
+		</span>
+	</div><!-- /input-group -->
+</div>            <div class="form-group">
+	<label for="password">Password <abbr title="Required">*</abbr></label>
+	<input id="password" class="input" type="password" required/>
+	<small class="caption">Note about this field</small>
+</div>            <div class="form-group">
+	<label for="email">Email Address <abbr title="Required">*</abbr></label>
+	<input id="email" class="input" type="email" placeholder="you@example.com" required/>
+	<small class="caption">Note about this field</small>
+</div>            <div class="form-group">
+	<label for="url">Web Address <abbr title="Required">*</abbr></label>
+	<input id="url" class="input" type="url" placeholder="http://example.com" required/>
+	<small class="caption">Note about this field</small>
+</div>            <div class="form-group">
+	<label for="select">Select <abbr title="Required">*</abbr></label>
+	<select id="select" class="input">
+		<optgroup label="Option Group">
+			<option>Option One</option>
+			<option>Option Two</option>
+			<option>Option Three</option>
+		</optgroup>
+	</select>
+	<small class="caption">Note about this selection</small>
+</div>            <div class="form-group">
+	<legend>Checkbox <abbr title="Required">*</abbr></legend>
+	<ul>
+		<li>
+			<label for="checkbox1" class="check"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked"/>Choice A</label>
+		</li>
+		<li>
+			<label for="checkbox2" class="check"><input id="checkbox2" name="checkbox" type="checkbox"/>Choice B</label>
+		</li>
+		<li>
+			<label for="checkbox3" class="check"><input id="checkbox3" name="checkbox" type="checkbox"/>Choice C</label>
+		</li>
+	</ul>
+	<small class="caption">Note about these options</small>
+</div>            <div class="form-group">
+	<legend>Radio <abbr title="Required">*</abbr></legend>
+	<ul>
+		<li>
+			<label for="radio1" class="check"><input id="radio1" name="radio" type="radio" class="radio" checked="checked"/>Option 1</label>
+		</li>
+		<li>
+			<label for="radio2" class="check"><input id="radio2" name="radio" type="radio" class="radio"/>Option 2</label>
+		</li>
+		<li>
+			<label for="radio3" class="check"><input id="radio3" name="radio" type="radio" class="radio"/>Option 3</label>
+		</li>
+	</ul>
+	<small class="caption">Note about these options</small>
+</div>            <div class="form-group">
+	<label for="textarea">Textarea <abbr title="Required">*</abbr></label>
+	<textarea id="textarea" class="input" rows="8" cols="32" required></textarea>
+	<small class="caption">Note about this field</small>
+</div>            <div class="form-group">
+	<label for="checkbox" class="check"><input id="checkbox" type="checkbox" class="checkbox" required/>Single checkbox</label>
+	<small class="caption">Note about this field</small>
+</div>            <div class="form-group">
+	<div class="button-group">
+		<input type="submit" class="primary-button" value="Post comment"/>
+		<input type="button" class="button" value="Preview"/>
+		<a href="#">Cancel</a>
+	</div>
+</div>        </form>
+
+        <form class="horizontal-form">
+            <fieldset>
+                <h2>Standard Form</h2>
+                <legend>Legend</legend>
+                <p><small class="caption">Required fields are marked <abbr title="Required">*</abbr></small></p>
+            </fieldset>
+            <div class="form-group">
+	<label for="text">Text Input <abbr title="Required">*</abbr></label>
+	<input id="text" class="input" type="text" required/>
+	<small class="caption">Note about this field</small>
+</div>            <div class="form-group">
+	<label for="password">Password <abbr title="Required">*</abbr></label>
+	<input id="password" class="input" type="password" required/>
+	<small class="caption">Note about this field</small>
+</div>            <div class="form-group">
+	<label for="email">Email Address <abbr title="Required">*</abbr></label>
+	<input id="email" class="input" type="email" placeholder="you@example.com" required/>
+	<small class="caption">Note about this field</small>
+</div>            <div class="form-group">
+	<label for="url">Web Address <abbr title="Required">*</abbr></label>
+	<input id="url" class="input" type="url" placeholder="http://example.com" required/>
+	<small class="caption">Note about this field</small>
+</div>            <div class="form-group">
+	<label for="select">Select <abbr title="Required">*</abbr></label>
+	<select id="select" class="input">
+		<optgroup label="Option Group">
+			<option>Option One</option>
+			<option>Option Two</option>
+			<option>Option Three</option>
+		</optgroup>
+	</select>
+	<small class="caption">Note about this selection</small>
+</div>            <div class="form-group">
+	<legend>Checkbox <abbr title="Required">*</abbr></legend>
+	<ul>
+		<li>
+			<label for="checkbox1" class="check"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked"/>Choice A</label>
+		</li>
+		<li>
+			<label for="checkbox2" class="check"><input id="checkbox2" name="checkbox" type="checkbox"/>Choice B</label>
+		</li>
+		<li>
+			<label for="checkbox3" class="check"><input id="checkbox3" name="checkbox" type="checkbox"/>Choice C</label>
+		</li>
+	</ul>
+	<small class="caption">Note about these options</small>
+</div>            <div class="form-group">
+	<legend>Radio <abbr title="Required">*</abbr></legend>
+	<ul>
+		<li>
+			<label for="radio1" class="check"><input id="radio1" name="radio" type="radio" class="radio" checked="checked"/>Option 1</label>
+		</li>
+		<li>
+			<label for="radio2" class="check"><input id="radio2" name="radio" type="radio" class="radio"/>Option 2</label>
+		</li>
+		<li>
+			<label for="radio3" class="check"><input id="radio3" name="radio" type="radio" class="radio"/>Option 3</label>
+		</li>
+	</ul>
+	<small class="caption">Note about these options</small>
+</div>            <div class="form-group">
+	<label for="textarea">Textarea <abbr title="Required">*</abbr></label>
+	<textarea id="textarea" class="input" rows="8" cols="32" required></textarea>
+	<small class="caption">Note about this field</small>
+</div>            <div class="form-group">
+	<label for="checkbox" class="check"><input id="checkbox" type="checkbox" class="checkbox" required/>Single checkbox</label>
+	<small class="caption">Note about this field</small>
+</div>            <div class="form-group">
+	<div class="button-group">
+		<input type="submit" class="primary-button" value="Post comment"/>
+		<input type="button" class="button" value="Preview"/>
+		<a href="#">Cancel</a>
+	</div>
+</div>        </form>
+
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p><small>Copyright &#169; 2015 <a href="http://amillionmonkeys.co.uk">amillionmonkeys.co.uk</a></small></p>
+        </div>
+    </footer>
+    <script src="/assets/js/min/scripts-min.js"></script>
+    </body>
+</html>
