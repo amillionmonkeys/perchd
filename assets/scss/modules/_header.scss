@@ -2,6 +2,10 @@
 	border-bottom: 2px solid $white;
 	@include clearfix();
 	background-color: $purple;
+	color: $white;
+	a {
+		color: inherit;
+	}
 }
 
 .logo {
@@ -16,6 +20,3 @@
 	}
 }
 
-.post-header h2 {
-	margin-top: 0;
-}

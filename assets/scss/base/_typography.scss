@@ -5,6 +5,7 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
+  font-weight: $base-font-weight;
 }
 
 h1,
@@ -13,10 +14,13 @@ h3,
 h4,
 h5 {
   font-family: $heading-font-family;
-  font-size: $base-font-size;
   line-height: $heading-line-height;
   margin-top: $small-spacing;
   margin-bottom: $small-spacing;
+}
+
+h4, h5 {
+  font-family: $base-font-family;
 }
 
 h1 {

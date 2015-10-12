@@ -15,6 +15,11 @@
 .main-nav li {
   width: 100%;
   display: block;
+  @include font-size(15px);
+  border-right: $nav-border;
+  &:first-child {
+    border-left: $nav-border;
+  }
 }
 
 .main-nav li a {
