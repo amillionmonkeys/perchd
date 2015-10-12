@@ -3,6 +3,7 @@
 .main-nav {
   margin-bottom: $base-spacing;
 }
+
 .main-nav ul {
   margin: 0;
   padding: 0;
@@ -15,10 +16,12 @@
   width: 100%;
   display: block;
 }
+
 .main-nav li a {
   padding: 1em;
   display:block;
 }
+
 .js .main-nav {
   clip: rect(0 0 0 0);
   max-height: 0;

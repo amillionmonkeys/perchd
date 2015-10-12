@@ -6,13 +6,13 @@ $heading-font-family:           $base-font-family;
 // Font Sizes
 $base-font-size:                16px;
 
-$h1-size:                       81px;
+$h1-size:                       31px;
 $h1-small-screen:				$h1-size * 0.666;
-$h2-size:                       54px;
+$h2-size:                       26px;
 $h2-small-screen:				$h2-size * 0.666;
-$h3-size:                       36px;
+$h3-size:                       22px;
 $h3-small-screen:				$h3-size * 0.666;
-$h4-size:                       24px;
+$h4-size:                       19px;
 $h4-small-screen:				$h4-size * 0.666;
 $h5-size:                       16px;
 $h5-small-screen:				16px;
@@ -22,28 +22,30 @@ $base-line-height:              1.5;
 $heading-line-height:           1.2;
 
 // Other Sizes
-$base-border-radius:            3px;
+$base-border-radius:            8px;
 $base-spacing:                  $base-line-height * 1em;
 $small-spacing:                 $base-spacing / 2;
 
 // Colors
-$dark-gray:                     #333;
-$medium-gray:                   #999;
-$light-gray:                    #ddd;
+$dark-gray:                     #68676E;
+$medium-gray:                   #9492A2;
+$light-gray:                    #F0F0F0;
 $white:                         #fff;
 
 $green:                         #3c763d;
 $red:                           #a94442;
 $orange:                        #8a6d3b;
 $blue:                          #31708f;
+$pink:							#CE4F74;
+$purple:						#4A4567;
 
 // Font Colors
-$base-background-color:         #fff;
+$base-background-color:         $white;
 $base-font-color:               $dark-gray;
-$action-color:                  $blue;
+$action-color:                  $pink;
 
 // Border
-$base-border-color:             $light-gray;
+$base-border-color:             $medium-gray;
 $base-border:                   1px solid $base-border-color;
 
 // Forms
@@ -54,10 +56,11 @@ $form-box-shadow-focus:         $form-box-shadow, 0 0 5px adjust-color($action-c
 
 // Buttons
 
-$button-primary:                $blue;
+$button-primary:                $pink;
 $button-primary--hover:			darken($button-primary, 15%);
-$button-secondary:              $medium-gray;
+$button-secondary:              $white;
 $button-secondary--hover:		darken($button-secondary, 15%);
+$button-secondary-border:		$pink;
 
 $button-text:                   $white;
 $button-border-radius:          $base-border-radius;
