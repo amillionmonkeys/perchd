@@ -1,6 +1,7 @@
 // Typography
 $base-font-family:              "adelle-sans", sans-serif;
 $heading-font-family:           "adelle", serif;
+$accent-font-family:			"adelle", serif;
 $base-font-weight:				400;
 $bold-font-weight:				700;
 
@@ -62,7 +63,8 @@ $form-border-radius: 			4px;
 
 $button-primary:                $pink;
 $button-primary--hover:			darken($button-primary, 15%);
-$button-secondary:              $white;
+$button-secondary:              $pink;
+$button-secondary-bkg:			$white;
 $button-secondary--hover:		darken($button-secondary, 15%);
 $button-secondary-border:		$pink;
 

@@ -1,19 +1,20 @@
 .post {
-
 }
 
 .post--excerpt {
 
 }
 
-.post__header {
-
+.post__header > * {
+	color: $purple;
 }
 
-.post__title {
-
+.post__title a {
+	color: $purple;
+	font-weight: $base-font-weight;
 }
 
 .post__byline {
-
+	font-style: italic;
 }
+
