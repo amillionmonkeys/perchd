@@ -2,6 +2,12 @@
 
 .main-nav {
   margin-bottom: $base-spacing;
+  margin: 0;
+  line-height: 2.5em;
+  @include media($gt-medium){
+    float:right;
+    line-height: 5.22em;
+  }
 }
 
 .main-nav ul {
@@ -15,17 +21,50 @@
 .main-nav li {
   width: 100%;
   display: block;
+  padding: 0 1em;
   @include font-size(15px);
-  border-right: $nav-border;
-  &:first-child {
-    border-left: $nav-border;
+  border-bottom: $nav-border;
+  text-align: center;
+    &:first-child {
+      border-top: $nav-border;
+    }
+  @include media($gt-medium){
+    border-right: $nav-border;
+    border-bottom: none;
+    text-align: left;
+      &:first-child {
+      border-left: $nav-border;
+      border-top: $nav-border;
+    }
   }
 }
 
-.main-nav li a {
-  padding: 1em;
-  display:block;
-}
+form.search-form {
+  position: relative;
+  margin: 1.77em auto;
+  width: 50%;
+  @include media($gt-medium) {
+    width: 100%;
+    @include margin(null 0);
+  }
+  input {
+    border: none;
+    height: 2em;
+    margin-bottom: 0;
+    @include font-size(15px);
+    &.search-form--submit {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 0 4px 4px 0;
+      background-image: url('/assets/img/search-form--submit.svg');
+      background-repeat: no-repeat;
+      background-position: 0.6667em 0.3333em;
+      text-indent: -9999px;
+      width: 2.667em;
+    }  
+  }
+}  
 
 .js .main-nav {
   clip: rect(0 0 0 0);
@@ -44,6 +83,8 @@
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-touch-callout: none;
   user-select: none;
+  display: block;
+  text-align: center;
 }
 
 @include media($gt-medium) {
