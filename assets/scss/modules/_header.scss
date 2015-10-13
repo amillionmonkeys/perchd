@@ -1,22 +1,30 @@
 .main-header {
-	border-bottom: 2px solid $white;
+	border-bottom: 1px solid $white;
 	@include clearfix();
 	background-color: $purple;
 	color: $white;
 	a {
 		color: inherit;
 	}
+	.outer-container {
+		padding: 0;
+		@include media($gt-medium) {
+			padding: 0 1em;
+		}
+	}
 }
 
 .logo {
+	float:left;
+	width: 100%;
+	h1 {
+		text-align: center;
+	}
 	@include media($gt-medium){
-		float:left;
+		width: auto;
+		text-align: left;
 	}
 }
 
-.main-nav {
-	@include media($gt-medium){
-		float:right;
-	}
-}
+
 

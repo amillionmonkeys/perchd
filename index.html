@@ -18,17 +18,16 @@
                     <h1><a href="index.html">perchd.io</a></h1>
                 </div>
                 <nav class="main-nav">
-                    <ul class="inline-list">
+                    <ul>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Gallery</a></li>
                         <li><a href="#">Snippets</a></li>
                         <li><a href="#">Links</a></li>
-                        <li><a href="#">Video</a></li>
+                        <li><a href="#">Videos</a></li>
                         <li>
                             <form action="/" class="search-form">
                                 <input type="search" placeholder="Search this site" class="search-form--input" />
-                                
-                                <input type="submit" value="Submit" class="search-form--submit" />
+                                <input type="submit" class="search-form--submit" />
                             </form>
                         </li>
                     </ul>
@@ -38,32 +37,34 @@
 
         <div class="hero">
             <div class="outer-container">
-                <h2>perchd.io is a place to find Perch related tips, tutorials, ideas and inspiration.</h2>
+                <div class="hero__content">
+                    <h2 class="hero__strapline">perchd.io is a place to find <a href="https://grabaperch.com/">Perch</a><br> related tips, tutorials, ideas and inspiration.</h2>
+                </div>
                 <nav class="icon-nav">
-                    <ul class="inline-list">
+                    <ul>
                         <li><a href="#">
-                            <i class="icon--blog"></i>
-                            <h3>Tutorials, tips &amp; insights ></h3>
+                            <i><img src="/assets/img/circle-icon--tips.svg"></i>
+                            <h3 class="icon-nav__title">Tutorials, tips &amp; insights ></h3>
                             </a>
                         </li>
                         <li><a href="#">
-                            <i class="icon--gallery"></i>
-                            <h3>Powered by Perch Gallery ></h3>
+                            <i><img src="/assets/img/circle-icon--gallery.svg"></i>
+                            <h3 class="icon-nav__title">Powered by Perch Gallery ></h3>
                             </a>
                         </li>
                         <li><a href="#">
-                            <i class="icon--snippets"></i>
-                            <h3>Code Snippets ></h3>
+                            <i><img src="/assets/img/circle-icon--code.svg"></i>
+                            <h3 class="icon-nav__title">Code Snippets ></h3>
                             </a>
                         </li>
                         <li><a href="#">
-                            <i class="icon--links"></i>
-                            <h3>Handy Links ></h3>
+                            <i><img src="/assets/img/circle-icon--links.svg"></i>
+                            <h3 class="icon-nav__title">Handy Links ></h3>
                             </a>
                         </li>
                         <li><a href="#">
-                            <i class="icon--video"></i>
-                            <h3>Videos ></h3>
+                            <i><img src="/assets/img/circle-icon--videos.svg"></i>
+                            <h3 class="icon-nav__title">Videos ></h3>
                             </a>
                         </li>
                     </ul>
@@ -72,49 +73,53 @@
         </div>
         
         <div class="outer-container">
-            <main class="main-content">
-                <article class="post post--excerpt  post--news">
-                    <div class="post__byline">
-                        <time datetime="2015-09-14" class="time">September 14, 2015</time>
-                    </div>
+            <main class="main-body">
+                <h2 class="page-title">Latest Perch tutorials, tips &amp; insights</h2>
+                <article class="post">
                     <header class="post__header">
-                        <h2 class="post__title"><a href="article.html">News Article</a></h2>
+                        <h3 class="post__title"><a href="article.html">News Article</a></h3>
+                        <div class="post__byline">
+                            <time datetime="2015-09-14">September 14, 2015</time>
+                        </div>
                     </header>
-                    <div class="post__content  post__content--excerpt">
+                    
+                    <div class="post__content">
                         <p>Aliquam id scelerisque massa, vel viverra purus. Donec nisi orci, dignissim in est sit amet, consectetur condimentum magna. Donec fermentum aliquam nisi, in luctus elit consequat eu. Aenean quis ipsum vel urna mollis gravida a a dui. Integer hendrerit quam a ante sagittis, eget tincidunt augue dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce elementum vulputate eleifend.</p>
                     </div>
                     <a href="article.html" class="button">Read more &raquo;</a>  
                 </article>
                 <hr />
 
-                <article class="post  post--excerpt  post--video">
-                    <div class="byline">
-                        <time datetime="2015-09-14" class="time">September 14, 2015</time>
-                    </div>
-                    <header class="post-header">
-                        <h2><a href="article.html">Video</a></h2>
+                <article class="post">
+                    <header class="post__header">
+                        <h3 class="post__title"><a href="article.html">Video</a></h3>
+                        <div class="post__byline">
+                            <time datetime="2015-09-14">September 14, 2015</time>
+                        </div>
                     </header>
-                    <div class="post-content">
+                    
+                    <div class="post__content">
                         <p>Aliquam id scelerisque massa, vel viverra purus. Donec nisi orci, dignissim in est sit amet, consectetur condimentum magna. Donec fermentum aliquam nisi, in luctus elit consequat eu. Aenean quis ipsum vel urna mollis gravida a a dui. Integer hendrerit quam a ante sagittis, eget tincidunt augue dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce elementum vulputate eleifend.</p>
                     </div>
-                    <a href="article.html" class="read-more">Read more &raquo;</a>  
+                    <a href="article.html" class="button">Read more &raquo;</a>  
                 </article>
                 <hr />
 
-                <article class="post  post--excerpt  post--link">
-                    <div class="byline">
-                        <time datetime="2015-09-14" class="time">September 14, 2015</time>
-                    </div>
-                    <header class="post-header">
-                        <h2><a href="article.html">Link to another site</a></h2>
+                <article class="post">
+                    <header class="post__header">
+                        <h3 class="post__title"><a href="article.html">Link to another site</a></h3>
+                        <div class="byline">
+                            <time datetime="2015-09-14" class="time">September 14, 2015</time>
+                        </div>
                     </header>
-                    <div class="post-content">
+                    <div class="post__content">
                         <p>Aliquam id scelerisque massa, vel viverra purus. Donec nisi orci, dignissim in est sit amet, consectetur condimentum magna. Donec fermentum aliquam nisi, in luctus elit consequat eu. Aenean quis ipsum vel urna mollis gravida a a dui. Integer hendrerit quam a ante sagittis, eget tincidunt augue dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce elementum vulputate eleifend.</p>
                     </div>
-                    <a href="article.html" class="read-more">Read more &raquo;</a>  
+                    <a href="article.html" class="button">Read more &raquo;</a>  
                 </article>
-                <nav>
-                  <ul class="pagination">
+                <hr /> 
+                <nav class="pagination-nav">
+                  <ul class="pagination__list">
                     <li>
                       <a href="#" aria-label="Previous">
                         <span aria-hidden="true">&laquo;</span>
@@ -132,39 +137,66 @@
                     </li>
                   </ul>
                 </nav>
-                <hr /> 
             </main>
             <aside class="sidebar">
-                <div class="widget">
-                    <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">YouTube</a></li>
-                    </ul>
-                </div>
-                <div class="widget  widget--gallery">
+
+                <div class="widget--gallery">
                     <div class="widget__header">
-                        <h4><i class="icon-gallery"></i> Gallery</h4>
+                        <i class="widget__icon"><svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                        <defs></defs>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                            <g id="Home" sketch:type="MSArtboardGroup" transform="translate(-912.000000, -614.000000)" fill="#575177">
+                                <g id="RHS" sketch:type="MSLayerGroup" transform="translate(912.000000, 604.000000)">
+                                    <g id="Gallery" sketch:type="MSShapeGroup">
+                                        <g id="icon" transform="translate(0.000000, 10.000000)">
+                                            <g id="Rectangle-39-+-Rectangle-38-+-Rectangle-40">
+                                                <rect id="Rectangle-39" x="0.298339844" y="9.37869651" width="8.97070732" height="11.6286426"></rect>
+                                                <rect id="Rectangle-38" x="0.298339844" y="0.157470703" width="20.7196218" height="6.8425293"></rect>
+                                                <rect id="Rectangle-40" x="12.0472543" y="9.37869651" width="8.97070732" height="11.6286426"></rect>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                        </svg></i>
+                        <h2 class="widget__title">Gallery</h2>
                     </div>
                     <div class="widget__content">
                        <img src="http://placehold.it/400x300" alt="cool site" />
+                       <p><a href="#">View the Gallery</a> or <a href="#">Submit your own</a></p>
                     </div>
                 </div>
-                <div class="widget  widget--subscribe">
+
+                <div class="widget--rss">
                     <div class="widget__header">
-                        <h4><i class="icon-rss"></i> Subscribe</h4>
+                        <i class="widget__icon"></i>
+                        <h2 class="widget__title">Subscribe</h2>
                     </div>
                     <div class="widget__content">
-                        <p>Get a summary of perchd.io articles in your inbox each week.</p>
+                        <p><strong>Never miss a Perch tutorial or tip!</strong><br>Get a summary of perchd.io articles in your inbox each week.</p>
                         <form action="/" class="form--subscribe">
                             <input type="email" placeholder="Your email address" />
-                            <input type="submit" vale="subscribe" />
+                            <input class="btn--secondary" type="submit" value="Don't miss out &raquo;" />
                         </form>
                     </div>
                 </div>
-                <div class="widget  widget--advert">
+
+                <div class="widget--snippet">
                     <div class="widget__header">
-                        <h4>Advert</h4>
+                        <i class="widget__icon"></i>
+                        <h2 class="widget__title">Latest Snippet</h2>
+                    </div>
+                    <div class="widget__content">
+                        <p>Aliquam id scelerisque massa, vel viverra purus. Donec nisi orci, dignissim in est sit amet, consectetur condimentum magna.</p>
+                        <p><a href="#">Get this snippet</a> or <a href="#">View all Snippets</a></p>
+                    </div>
+                </div>
+
+                <div class="widget--advert">
+                    <div class="widget__header">
+                        <div class="widget__icon"></i>
+                        <h2 class="widget__title">Advert</h2>
                     </div>
                     <div class="widget__content">
                         <img src="http://placehold.it/400x400" alt="Great advert">
@@ -172,11 +204,11 @@
                 </div>
             </aside>
         </div>
-        <hr />
+        
         <footer class="main-footer">
             <div class="outer-container">
                 <div class="footer__column">
-                    <h5>More information</h5>
+                    <h3>More information</h3>
                     <ul>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">About</a></li>
@@ -185,26 +217,27 @@
                     </ul>
                 </div>
                 <div class="footer__column">
-                    <div class="widget  widget--subscribe">
+                    <div class="widget">
                         <div class="widget__header">
-                            <h4>Subscribe</h4>
+                            <div class="widget__title"><h3>Subscribe</h3></div>
                         </div>
                         <div class="widget__content">
                             <p>Get a summary of perchd.io articles in your inbox each week.</p>
                             <form action="/" class="form--subscribe">
                                 <input type="email" placeholder="Your email address" />
-                                <input type="submit" class="button button--invert" value="subscribe" />
+                                <input type="submit" class="btn--inverse" value="Don't miss out >" />
                             </form>
                         </div>
                     </div>
                             
                 </div>
                 <div class="footer__column">
-                    <nav class="links  links--footer">
+                    <h3>Conversations</h3>
+                    <nav class="icon-nav">
                         <ul>
-                            <li><a class="button button--round" href="#">Twitter</a></li>
-                            <li><a class="button button--round" href="#">Facebook</a></li>
-                            <li><a class="button button--round" href="#">YouTube</a></li>
+                            <li><a href="#"><img src="/assets/img/circle-icon--twitter.svg"></a></li>
+                            <li><a href="#"><img src="/assets/img/circle-icon--facebook.svg"></a></li>
+                            <li><a href="#"><img src="/assets/img/circle-icon--youtube.svg"></a></li>
                             
                         </ul>
                     </nav>

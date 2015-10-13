@@ -2,7 +2,8 @@
 .button,
 .button--small,
 .button--large,
-.button--secondary,
+.btn--secondary,
+.btn--inverse,
 button {
   @include appearance(none);
   -webkit-font-smoothing: antialiased;
@@ -12,7 +13,7 @@ button {
   color: $button-text;
   cursor: pointer;
   display: inline-block;
-  font-family: $base-font-family;
+  font-family: $accent-font-family;
   @include font-size($base-font-size);
   font-weight: $base-font-weight;
   line-height: 1;
@@ -38,12 +39,23 @@ button {
   &.button--large {
     @include font-size($base-font-size * 1.25);
   }
-  &.button--secondary {
-    background-color: $button-secondary;
+  &.btn--secondary {
+    color: $button-secondary;
+    background-color: $button-secondary-bkg;
     border: 2px solid $button-secondary-border;
     &:hover,
     &:focus {
       background-color: $button-secondary--hover;
+    }
+  }
+  &.btn--inverse {
+    color: $button-inverse;
+    background-color: $button-inverse-bkg;
+    border: $button-inverse-border;
+    &:hover,
+    &:focus {
+      color: $button-inverse-hover;
+      border: 2px solid $button-inverse-hover;
     }
   }
 }

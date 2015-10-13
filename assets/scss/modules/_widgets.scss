@@ -1,0 +1,36 @@
+.widget {
+	margin-bottom: 4.375em; 
+	&--gallery, &--rss, &--snippet, &--advert {
+		@extend .widget;
+	}
+	.btn--secondary, .btn--inverse {
+		margin-top: 0.5em;
+	}
+}
+
+.widget__header {
+	margin-bottom: 0.25em;
+}
+
+.widget__icon {
+	margin-right: 0.25em;
+}
+
+.widget__title {
+	color: $purple;
+	display: inline-block;
+	font-weight: $base-font-weight;
+	margin-top: 0;
+	.main-footer & {
+		color: $white;
+		font-weight: $bold-font-weight;
+	}
+}
+
+.widget__content {
+	margin-top: 0;
+	p:first-child {
+		margin-top: 0;
+	}
+}
+

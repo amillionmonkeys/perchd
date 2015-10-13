@@ -1,6 +1,7 @@
 // Typography
 $base-font-family:              "adelle-sans", sans-serif;
 $heading-font-family:           "adelle", serif;
+$accent-font-family:			"adelle", serif;
 $base-font-weight:				400;
 $bold-font-weight:				700;
 
@@ -56,15 +57,21 @@ $nav-border:					1px solid $nav-border-color;
 $fieldset-background:           lighten($base-border-color, 10%);
 $form-box-shadow:               inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus:         $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
-
+$form-border-radius: 			4px;
 
 // Buttons
 
 $button-primary:                $pink;
 $button-primary--hover:			darken($button-primary, 15%);
-$button-secondary:              $white;
+$button-secondary:              $pink;
+$button-secondary-bkg:			$white;
+$button-secondary-border:		2px solid $button-secondary;
 $button-secondary--hover:		darken($button-secondary, 15%);
 $button-secondary-border:		$pink;
+$button-inverse:				$white;
+$button-inverse-bkg:			transparent;
+$button-inverse-border:			2px solid $button-inverse;
+$button-inverse-hover:			$pink;
 
 $button-text:                   $white;
 $button-border-radius:          $base-border-radius;

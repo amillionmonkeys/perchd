@@ -1,19 +1,12 @@
-.post {
-
-}
-
-.post--excerpt {
-
-}
-
-.post__header {
-
-}
-
 .post__title {
-
+	color: $purple;
+	font-weight: $base-font-weight;
+	a {
+		color: $purple;
+	}
 }
 
 .post__byline {
-
+	font-style: italic;
 }
+

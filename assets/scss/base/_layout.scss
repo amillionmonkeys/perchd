@@ -11,7 +11,7 @@
 	}
 }
 
-.main-content {
+.main-body {
 	@include media($gt-small) {
 		@include span-columns(8);
 	}
