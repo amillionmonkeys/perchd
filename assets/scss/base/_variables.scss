@@ -65,8 +65,13 @@ $button-primary:                $pink;
 $button-primary--hover:			darken($button-primary, 15%);
 $button-secondary:              $pink;
 $button-secondary-bkg:			$white;
+$button-secondary-border:		2px solid $button-secondary;
 $button-secondary--hover:		darken($button-secondary, 15%);
 $button-secondary-border:		$pink;
+$button-inverse:				$white;
+$button-inverse-bkg:			transparent;
+$button-inverse-border:			2px solid $button-inverse;
+$button-inverse-hover:			$pink;
 
 $button-text:                   $white;
 $button-border-radius:          $base-border-radius;

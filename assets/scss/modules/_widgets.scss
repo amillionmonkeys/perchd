@@ -1,0 +1,21 @@
+.widget {
+	margin-bottom: 4.375em; 
+}
+
+
+.widget__header > * {
+	color: $purple;
+	font-weight: $base-font-weight;
+	margin-bottom: 0.25em;
+}
+
+.widget__content {
+	margin-top: 0;
+	p:first-child {
+		margin-top: 0;
+	}
+}
+
+.btn--secondary {
+
+}

@@ -2,7 +2,8 @@
 .button,
 .button--small,
 .button--large,
-.button--secondary,
+.btn--secondary,
+.btn--inverse,
 button {
   @include appearance(none);
   -webkit-font-smoothing: antialiased;
@@ -45,6 +46,16 @@ button {
     &:hover,
     &:focus {
       background-color: $button-secondary--hover;
+    }
+  }
+  &.btn--inverse {
+    color: $button-inverse;
+    background-color: $button-inverse-bkg;
+    border: $button-inverse-border;
+    &:hover,
+    &:focus {
+      color: $button-inverse-hover;
+      border: 2px solid $button-inverse-hover;
     }
   }
 }
