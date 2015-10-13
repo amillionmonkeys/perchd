@@ -1,0 +1,83 @@
+.pagination-nav {
+  ul {
+    padding: 0;
+    text-align: center;
+    li {
+      display: inline-block;
+      margin: 0 0.5em;
+      height: 30px;
+      width: 30px;
+      border-radius: 4px;
+      border: 2px solid transparent;
+      &:hover {
+        border-color: $pink;
+        a {
+          color: $pink;
+        }
+      }
+      a {
+        color: $medium-gray;
+
+      }
+    }
+  } 
+}
+
+
+
+// .pagniation-nav {
+//   margin: 0 auto;
+// }
+
+
+// .pagination__list {
+//   display: block;
+//   margin: $small-spacing 0;
+// }
+
+// .pagination__list > li {
+//   display: inline;
+// }
+
+// .pagination__list > li > a,
+// .pagination__list > li > span {
+//   position: relative;
+//   float: left;
+//   padding: 6px 12px;
+//   margin-left: -1px;
+//   line-height: 1.42857143;
+//   color: #337ab7;
+//   text-decoration: none;;
+// }
+// .pagination__list > li:first-child > a,
+// .pagination__list > li:first-child > span {
+//   margin-left: 0;
+//   border-top-left-radius: $button-border-radius;
+//   border-bottom-left-radius: $button-border-radius;
+// }
+// .pagination__list > li:last-child > a,
+// .pagination__list > li:last-child > span {
+//   border-top-right-radius: $button-border-radius;
+//   border-bottom-right-radius: $button-border-radius;
+// }
+// .pagination__list > li > a:hover,
+// .pagination__list > li > span:hover,
+// .pagination__list > li > a:focus,
+// .pagination__list > li > span:focus {
+//   z-index: 3;
+//   color: #23527c;
+//   background-color: $light-gray;
+//   border-color: $medium-gray;
+// }
+// .pagination__list > .active > a,
+// .pagination__list > .active > span,
+// .pagination__list > .active > a:hover,
+// .pagination__list > .active > span:hover,
+// .pagination__list > .active > a:focus,
+// .pagination__list > .active > span:focus {
+//   z-index: 2;
+//   color: $white;
+//   cursor: default;
+//   background-color: $action-color;
+//   border-color: darken($action-color, 15%);
+// }

@@ -1,17 +1,9 @@
-.post {
-}
-
-.post--excerpt {
-
-}
-
-.post__header > * {
-	color: $purple;
-}
-
-.post__title a {
+.post__title {
 	color: $purple;
 	font-weight: $base-font-weight;
+	a {
+		color: $purple;
+	}
 }
 
 .post__byline {

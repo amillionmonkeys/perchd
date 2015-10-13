@@ -1,51 +1,79 @@
 .hero {
 	background: linear-gradient(to right, $pink, #894B7C);
+	transition: background 10s;	
 	float: left;
 	width: 100%;
 	padding: 4.125em 0;
-	&__content {
-		color: $white;
-		text-align: center;
+}
 
-		* {
-			margin-top: 0;
-			line-height: 1.73em;
-		}
-		@include media($gt-medium) {
-			width: 85%;
-			text-align: left;
-		}
-		a {
-			color: $white;
-			text-decoration: underline;
-		}
+.hero__content {
+	color: $white;
+	text-align: center;
+	@include media($gt-medium) {
+		width: 85%;
+		text-align: left;
+	}
+	a {
+		color: $white;
+		text-decoration: underline;
 	}
 }
 
+.hero__strapline {
+	margin-top: 0;
+	line-height: 1.73em;
+}
+
+//Icon Nav
+
 .icon-nav {
-	* {
-		color: $white;
-	}
 	ul {
 		padding-left: 0;
+		li {
+			width: 50%;
+			margin: 0 auto;
+			text-align: center;
+		}
 		@include media($gt-medium) {
 			display: flex;
 			align-items: stretch;
-			justify-content: space-between;
-			footer & {
-				justify-content: start;
-			}
-		}
-		li {
-			// width: 33%;
-			padding: 0 auto;
-			@include media($gt-medium) {
-				// width: 8.4375em;
-				text-align: center;
-				// flex-grow: 1;
-				// flex-shrink: 1;
+			li {
+				flex: 1;
+				padding-right: 2em;
+				&:last-child {
+					padding-right: 0;
+				}
 			}
 		}
 	}
 }
 
+.main-footer .icon-nav li {
+	padding: 0;
+	max-width: 3.75em;
+	margin: 0 1.25em 0 0;
+	img {
+		max-width: 3.75em;
+		float: left;
+	}
+}
+
+.icon-nav__title {
+	width: 66.667%;
+	@include margin(null auto);
+	color: $white;
+	@include media($gt-medium) {
+		width: 100%;
+	}
+}
+
+//Main Content
+
+.main-body, .sidebar {
+	padding-top: 4.25em;
+}
+
+.page-title {
+	color: $purple;
+	margin-top: 0;
+}
