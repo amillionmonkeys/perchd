@@ -38,3 +38,7 @@
 .clearfix {
 	@include clearfix();
 }
+
+.main-body, .sidebar {
+	padding-top: 4.25em;
+}

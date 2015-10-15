@@ -17,6 +17,7 @@ h5 {
   line-height: $heading-line-height;
   margin-top: $small-spacing;
   margin-bottom: $small-spacing;
+  color: $purple;
 }
 
 h4, h5 {
@@ -83,4 +84,8 @@ hr {
   margin: $base-spacing 0;
 }
 
+.page-title {
+  color: $purple;
+  margin-top: 0;
+}
 

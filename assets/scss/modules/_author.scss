@@ -1,0 +1,32 @@
+// Author
+
+.author {
+	padding: 1.5em 0;
+	@include clearfix;
+}
+.author__sidebar {
+	@include span-columns(3);
+}
+
+.author__main {
+	@include span-columns(9);
+}
+
+.author__avatar {
+	height: 7.5em;
+	width: 7.5em;
+	border-radius: 50%;
+	@include clearfix;
+	overflow: hidden;
+	img {
+		float: left;
+		height: 100%;
+		width: auto;
+	}
+
+}
+
+.author__name {
+	font-weight: $base-font-weight;
+	margin: 0;
+}
