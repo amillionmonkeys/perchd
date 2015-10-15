@@ -10,3 +10,19 @@
 	font-style: italic;
 }
 
+.post--extended .post__content {
+	h1, h2, h3, h4, h5 {
+		font-family: $base-font-family;
+	}
+}
+
+//Tags
+
+.tags {
+	padding: 2em 0;
+}
+
+.tags input.btn--secondary {
+	border-color: $purple;
+	color: $purple;
+}

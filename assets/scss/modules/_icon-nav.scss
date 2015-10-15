@@ -1,0 +1,44 @@
+//Icon Nav
+
+.icon-nav ul {
+	padding-left: 0;
+	li {
+		@include clearfix;
+		margin-bottom: 1.5em;
+	}
+	@include media($gt-medium) {
+		display: flex;
+		align-items: stretch;
+		li {
+			flex: 1;
+			padding-right: 2em;
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+
+.icon-nav__icon {
+	@include span-columns(3);
+	@include media($gt-medium) {
+		width: 100%;
+	}
+}
+
+.icon-nav__title {
+	font-family: $accent-font-family;
+	@include span-columns(9);
+	margin-top: 2em;
+	padding-left: 1em;
+	color: $white;
+	a {
+		color: $white;
+	}
+	@include media($gt-medium) {
+		width: 100%;
+		text-align: center;
+		margin-top: 0.5em;
+	}
+}
