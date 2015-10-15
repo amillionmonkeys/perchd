@@ -15,7 +15,7 @@ button {
   display: inline-block;
   font-family: $accent-font-family;
   @include font-size($base-font-size);
-  font-weight: $base-font-weight;
+  font-weight: $bold-font-weight;
   line-height: 1;
   padding: $button-padding;
   text-decoration: none;

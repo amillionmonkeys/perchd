@@ -22,6 +22,7 @@
 .hero__strapline {
 	margin-top: 0;
 	line-height: 1.73em;
+	color: $white;
 }
 
 //Icon Nav
@@ -76,4 +77,95 @@
 .page-title {
 	color: $purple;
 	margin-top: 0;
+}
+
+// Article 
+
+.post--extended .post__content {
+	h1, h2, h3, h4, h5 {
+		font-family: $base-font-family;
+	}
+}
+
+// Author
+
+.author {
+	padding: 1.5em 0;
+	@include clearfix;
+}
+.author__sidebar {
+	@include span-columns(3);
+}
+
+.author__main {
+	@include span-columns(9);
+}
+
+.author__avatar {
+	height: 7.5em;
+	width: 7.5em;
+	border-radius: 50%;
+	@include clearfix;
+	overflow: hidden;
+	img {
+		float: left;
+		height: 100%;
+		width: auto;
+	}
+
+}
+
+// Tags
+
+.tags {
+	padding: 2em 0;
+}
+
+.tags input.btn--secondary {
+	border-color: $purple;
+	color: $purple;
+}
+
+.author__name {
+	font-weight: $base-font-weight;
+	margin: 0;
+}
+
+//Comments
+
+.comments__list {
+	list-style: none;
+	padding-left: 0;
+}
+
+.comment__item {
+	@include clearfix;
+	margin-bottom: 23m;
+}
+
+.comment__avatar {
+	@include span-columns(3);
+	border-radius: 50%;
+	@include clearfix;
+	overflow: hidden;
+	height: 4.375em;
+	width: 4.375em;
+	img {
+		float: left;
+		height: 100%;
+		width: auto;
+	}
+}
+
+.comment__content {
+	@include span-columns(9);
+	time {
+		@include font-size(14px);
+	}
+}
+
+.comment__author {
+	margin-top: 0;
+	font-family: $base-font-family;
+	font-weight: $base-font-weight;
 }

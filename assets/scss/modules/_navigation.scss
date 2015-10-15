@@ -1,6 +1,6 @@
 .main-nav {
   margin: 0;
-  line-height: 2.5em;
+  line-height: 2.6em;
   @include media($gt-medium){
     float: right;
     line-height: 5.22em;
@@ -19,12 +19,23 @@
   text-align: center;
     &:first-child {
       border-top: $nav-border;
-    }
+      @include media($gt-medium){
+        border-left: $nav-border;
+        border-top: 3px solid transparent;
+        &:hover, & .active {
+        border-top: 3px solid $pink;
+        }
+      }
+    } 
   @include media($gt-medium){
     border-right: $nav-border;
-    border-bottom: none;
-      &:first-child {
-      border-left: $nav-border;
+    border-bottom: 0;
+    border-top: 3px solid transparent; 
+    &:hover, & .active {
+      border-top: 3px solid $pink;
+    }
+    &:last-child {
+      border-top: none;
     }
   }
 }

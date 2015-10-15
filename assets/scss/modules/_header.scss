@@ -19,6 +19,7 @@
 	width: 100%;
 	h1 {
 		text-align: center;
+		color: $white;
 	}
 	@include media($gt-medium){
 		width: auto;
