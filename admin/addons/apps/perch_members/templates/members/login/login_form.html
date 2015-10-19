@@ -1,0 +1,37 @@
+<perch:member logged-in="true"> 
+
+	<p>Hi <perch:member id="first_name" />, you are logged in</p>
+
+<perch:else:member />
+
+	<perch:form id="login" method="post" app="perch_members">
+		<fieldset>
+		   	<legend>Log in</legend>
+
+			<perch:error for="all" type="login">
+				<p class="error">Those details do not match our records.</p>
+			</perch:error>
+
+			<div>
+				<perch:label for="email">Email</perch:label>
+				<perch:input type="email" id="email" required="true" label="Email" />
+				<perch:error for="email" type="required">Required</perch:error>
+				<perch:error for="email" type="format">Check format of address</perch:error>
+			</div>
+			<div>
+				<perch:label for="password">Password</perch:label>
+				<perch:input type="password" id="password" required="true" label="Password" />
+				<perch:error for="password" type="required">Required</perch:error>
+			</div>
+			<div>
+				<perch:input type="submit" id="submit" value="Log in" />
+				<perch:input type="hidden" id="r" />
+
+				<p>Forgotten your password? <a href="/members/reset.php">Reset it now</a>.</p>
+			</div>
+
+	    </fieldset>
+
+	</perch:form>
+
+</perch:member>

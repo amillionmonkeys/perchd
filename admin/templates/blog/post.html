@@ -1,0 +1,42 @@
+    <header class="post__header">
+        <h2 class="post__title">
+         <a href="<perch:blog id="postURL" type="hidden" />" rel="bookmark" class="p-name">
+            <perch:blog id="postTitle" type="text" label="Title" required="true" size="xl autowidth" order="1" />
+        </a>
+        </h2>
+        <div class="post__byline">
+            <time class="dt-published" datetime="<perch:blog id="postDateTime" type="date" label="Date" time="true" format="Y-m-d H:i:s" divider-before="Meta information" />">
+                <perch:blog id="postDateTime" type="date" time="true" format="%d %B %Y" /> 
+            </time>
+        </div>
+    </header>
+    
+    <div class="post__content">
+        <perch:blog id="postDescHTML" type="textarea" label="Post" order="2" editor="markitup" markdown="true" size="xxl autowidth" required="true" />
+    </div>  
+</article>
+
+<footer class="post-footer">
+    <div class="author">
+        <div class="author__sidebar">
+            <div class="author__avatar">
+                <img src="http://placehold.it/150x150">
+            </div>
+        </div>
+        <div class="author__main">
+            <h2 class="author__name">Phil Smith</h2>
+            <div class="author__bio">
+                <p>I am co-Director of amillionmonkeys, a small web-agency based in Brighton. I coffee-drinking, beer-swigging, music-loving dad and husband.</p>
+            </div>
+        </div>
+    </div>
+    <div class="tags">
+        <perch:categories id="categories" set="blog" label="Categories" display-as="checkboxes">
+            <a class="btn--secondary" href="archive.php?cat=<perch:category id="catSlug" type="slug" />" class="p-category">
+                <perch:category id="catTitle" type="text" />
+            </a>
+        </perch:categories>
+    </div>
+</footer>
+
+<perch:blog id="excerpt" type="textarea" label="Excerpt" markdown="true" order="3" suppress="true" size="s" />

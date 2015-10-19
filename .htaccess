@@ -1,0 +1,5 @@
+# Perch Runway
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/admin 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* /admin/core/runway/start.php [L] 

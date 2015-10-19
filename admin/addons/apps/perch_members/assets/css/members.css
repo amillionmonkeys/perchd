@@ -1,0 +1,14 @@
+table.tags {
+	margin-top: 10px;
+}
+
+table.tags {
+	padding-left: 230px;
+}
+
+@media screen and (max-width: 1060px) {
+	table.tags {
+		margin-top: 10px;
+		padding-left: 0;
+	}
+}
