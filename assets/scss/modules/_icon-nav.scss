@@ -1,10 +1,16 @@
 //Icon Nav
 
+
+
 .icon-nav ul {
 	padding-left: 0;
 	li {
 		@include clearfix;
 		margin-bottom: 1.5em;
+		svg {
+			width: 100%;
+			height: auto;
+		}
 		a {
 			display: flex;
 			align-items: center;
