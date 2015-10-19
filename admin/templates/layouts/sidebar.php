@@ -1,7 +1,7 @@
 <aside class="sidebar">
     <div class="widget">
         <div class="widget__header">
-            <h2 class="widget__title">Gallery</h2>
+            <h2 class="widget__title"><?php perch_layout('icons/icon--gallery')?> Gallery</h2>
         </div>
         <div class="widget__content">
            <img src="http://placehold.it/400x300" alt="cool site" />
@@ -9,7 +9,7 @@
     </div>
     <div class="widget">
         <div class="widget__header">
-            <h2 class="widget__title">Subscribe</h2>
+            <h2 class="widget__title"><?php perch_layout('icons/icon--rss')?> Subscribe</h2>
         </div>
         <div class="widget__content">
             <p>Get a summary of perchd.io articles in your inbox each week.</p>
@@ -21,7 +21,7 @@
     </div>
     <div class="widget  widget--advert">
         <div class="widget__header">
-            <h2 class="widget__title">Advert</h2>
+            <h2 class="widget__title"><?php perch_layout('icons/icon--gallery')?> Advert</h2>
         </div>
         <div class="widget__content">
             <img src="http://placehold.it/400x400" alt="Great advert">

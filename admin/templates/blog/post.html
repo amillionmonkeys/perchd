@@ -6,7 +6,7 @@
         </h2>
         <div class="post__byline">
             <time class="dt-published" datetime="<perch:blog id="postDateTime" type="date" label="Date" time="true" format="Y-m-d H:i:s" divider-before="Meta information" />">
-                <perch:blog id="postDateTime" type="date" time="true" format="%d %B %Y" /> 
+                <perch:blog id="postDateTime" type="date" time="true" format="l dS F Y" /> 
             </time>
         </div>
     </header>
@@ -16,20 +16,24 @@
     </div>  
 </article>
 
+<hr />
+
 <footer class="post-footer">
     <div class="author">
         <div class="author__sidebar">
             <div class="author__avatar">
-                <img src="http://placehold.it/150x150">
+                    <img src="//www.gravatar.com/avatar/<perch:blog id="authorEmail" hash="md5" type="hidden" />?s=280&amp;d=mm" width="140" height="140" alt="<perch:blog id="authorGivenName" type="hidden" /> <perch:blog id="authorFamilyName" type="hidden" />" />
             </div>
         </div>
         <div class="author__main">
-            <h2 class="author__name">Phil Smith</h2>
+            <h2 class="author__name"><perch:blog id="authorGivenName" type="hidden" /> <perch:blog id="authorFamilyName" type="hidden" /></h2>
             <div class="author__bio">
-                <p>I am co-Director of amillionmonkeys, a small web-agency based in Brighton. I coffee-drinking, beer-swigging, music-loving dad and husband.</p>
+                <perch:blog id="author_biog" type="hidden" html="true" />
             </div>
         </div>
     </div>
+    <hr />
+
     <div class="tags">
         <perch:categories id="categories" set="blog" label="Categories" display-as="checkboxes">
             <a class="btn--secondary" href="archive.php?cat=<perch:category id="catSlug" type="slug" />" class="p-category">
@@ -37,6 +41,9 @@
             </a>
         </perch:categories>
     </div>
+
+    <hr />
+
 </footer>
 
 <perch:blog id="excerpt" type="textarea" label="Excerpt" markdown="true" order="3" suppress="true" size="s" />

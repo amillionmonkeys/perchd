@@ -209,5 +209,6 @@
     "Published": "Published",
     "Draft": "Draft",
     "": "",
-    "Update Blog": "Update Blog"
+    "Update Blog": "Update Blog",
+    "Default": "Default"
 }

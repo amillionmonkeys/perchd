@@ -1,21 +1,31 @@
 <perch:before>
+<section class="comments">
     <h2>Comments</h2>
-	<ul class="comments listing">
+    <ol class="comments__list">
 </perch:before>
-		<li id="comment<perch:blog id="commentID" type="hidden" />">
-			<img src="//www.gravatar.com/avatar/<perch:blog id="commentEmail" type="email" label="Email" order="2" hash="md5" required="true" />?s=120&amp;d=mm" width="60" height="60" />
-			
-			<div class="comment">
-				<div class="commenter">
-					<perch:if exists="commentURL"><a href="<perch:blog id="commentURL" type="url" label="URL" order="3" />"></perch:if>
-						<strong><perch:blog id="commentName" type="text" label="Name" order="1" required="true" />:</strong>
-					<perch:if exists="commentURL"></a></perch:if>
-				</div>
-				<p rel="bookmark" class="date"><perch:blog id="commentDateTime" format="%d %b %Y %X" type="date" time="true" label="Date" /></p>
-				<perch:blog id="commentHTML" encode="false" html="true" type="textarea" label="Message (HTML)" order="4" required="true" />
-			</div>
+		<li class="comment__item"  id="comment<perch:blog id="commentID" type="hidden" />">
+		    <div class="comment__avatar">
+		        <img src="//www.gravatar.com/avatar/<perch:blog id="commentEmail" type="email" label="Email" order="2" hash="md5" required="true" />?s=140&amp;d=mm" width="70" height="70" />
+		    </div>
+		    <div class="comment__content">
+		        <div class="byline">
+		            <h3 class="comment__author">
+		        		<perch:if exists="commentURL"><a rel="nofollow" href="<perch:blog id="commentURL" type="url" label="URL" order="3" />"></perch:if>
+							<strong><perch:blog id="commentName" type="text" label="Name" order="1" required="true" />:</strong>
+						<perch:if exists="commentURL"></a></perch:if>
+					</h3>
+		        </div>
+		        <div class="comment__body">
+		            <perch:blog id="commentHTML" encode="false" html="true" type="textarea" label="Message (HTML)" order="4" required="true" />
+		        </div>
+		        <time datetime="2015-09-14"><perch:blog id="commentDateTime" format="l dS F Y H:i" type="date" time="true" label="Date" /></time>
+		    </div>
 		</li>
 <perch:after>
-	</ul>
-
+	</ol>
+</section> 
 </perch:after>
+
+
+                        
+                  
