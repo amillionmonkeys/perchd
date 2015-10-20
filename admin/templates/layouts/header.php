@@ -15,20 +15,18 @@
         <header class="main-header">
             <div class="outer-container">
                 <div class="logo">
-                    <h1><a href="index.html">perchd.io</a></h1>
+                    <h1><a href="/">perchd.io</a></h1>
                 </div>
                 <nav class="main-nav">
                     <ul>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Snippets</a></li>
-                        <li><a href="#">Links</a></li>
-                        <li><a href="#">Videos</a></li>
+                        <li><a href="/">Blog</a></li>
+                        <li><a href="/about">About</a></li>
+                        <!--<li><a href="#">Gallery</a></li>-->
+                        <!--<li><a href="#">Snippets</a></li>-->
+                        <li><a href="/links">Links</a></li>
+                        <li><a href="/category/videos">Videos</a></li>
                         <li>
-                            <form action="/" class="search-form">
-                                <input type="search" placeholder="Search this site" class="search-form--input" />
-                                <input type="submit" class="search-form--submit" />
-                            </form>
+                            <?php perch_search_form(); ?>
                         </li>
                     </ul>
                 </nav>

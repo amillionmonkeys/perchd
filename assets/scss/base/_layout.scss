@@ -1,36 +1,37 @@
 .outer-container {
 	padding: 0 1em;
-	@include media($gt-small) {
+	@include media($gt-medium) {
 		@include outer-container;
 	}
 }
 
 .row {
-	@include media($gt-small) {
+	@include media($gt-medium) {
 		@include row;
 	}
 }
 
 .main-body {
-	@include media($gt-small) {
-		@include span-columns(8);
-	}
+	// @include media($gt-medium) {
+	// 	@include span-columns(8);
+	// }
 }
 
 .sidebar {
-	@include media($gt-small) {
-		@include span-columns(4);
-	}
+	display: none;
+	// @include media($gt-medium) {
+	// 	@include span-columns(4);
+	// }
 }
 
 .footer__column {
-	@include media($gt-small) {
+	@include media($gt-medium) {
 		@include span-columns(4);
 	}
 }
 
 .half-width {
-	@include media($gt-small) {
+	@include media($gt-medium) {
 		@include span-columns(6);
 	}
 }

@@ -5,5 +5,6 @@
 		'perch_blog',
 		'perch_comments',
 		'perch_forms',
-		'perch_members'
+		'perch_members',
+		'pinboard'
 	);

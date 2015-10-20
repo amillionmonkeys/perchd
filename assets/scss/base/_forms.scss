@@ -29,6 +29,7 @@ label {
 #{$all-text-inputs},
 select,
 textarea {
+  color: $purple;
   background-color: $base-background-color;
   border: $base-border;
   border-radius: $form-border-radius;

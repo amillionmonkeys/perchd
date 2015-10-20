@@ -3,7 +3,9 @@
     perch_layout('header', [
     	'title'=>'Homepage | perch.io'
     ]);
-    perch_layout('homepage-header'); ?>      
+   
+    // perch_layout('homepage-header'); 
+?>      
         <div class="outer-container">
             <main class="main-body">
                 <h2 class="page-title">Latest Perch tutorials, tips &amp; insights</h2>

@@ -3,10 +3,10 @@
                 <div class="footer__column">
                     <h3>More information</h3>
                     <ul>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">License</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/license">License</a></li>
+                        <li><a href="/cookies">Cookie Policy</a></li>
                     </ul>
                 </div>
                 <div class="footer__column">
@@ -28,9 +28,9 @@
                     <h3>Conversations</h3>
                     <nav class="icon-nav">
                         <ul>
-                            <li><a href="#"><img src="/assets/img/circle-icon--twitter.svg"></a></li>
-                            <li><a href="#"><img src="/assets/img/circle-icon--facebook.svg"></a></li>
-                            <li><a href="#"><img src="/assets/img/circle-icon--youtube.svg"></a></li>
+                            <li><a href="http://twitter.com/perchdio"><?php perch_layout('icons/circle-icon--twitter'); ?></a></li>
+                            <li><a href="#"><?php perch_layout('icons/circle-icon--facebook'); ?></a></li>
+                            <li><a href="http://youtube.com/perchdio"><?php perch_layout('icons/circle-icon--youtube'); ?></a></li>
                             
                         </ul>
                     </nav>
@@ -42,7 +42,7 @@
 
             <div class="outer-container">
                 <div class="copyright-notice">
-                    <p>&copy; 2015 amillionmonkeys Ltd. Site designed by Sarah Evans and built by amillionmonkeys.<br />
+                    <p>&copy; 2015 amillionmonkeys Ltd. Site designed by <a href="http://www.sarahevansdesign.co.uk/">Sarah Evans</a> and built by <a href="http://amillionmonkeys.co.uk">amillionmonkeys</a>.<br />
                     Trademarks and brands are the property of their respective owners.</p>
                 </div>
             </div>

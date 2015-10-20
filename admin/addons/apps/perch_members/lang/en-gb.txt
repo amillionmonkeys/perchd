@@ -53,5 +53,8 @@
     "Manage members": "Manage members",
     "Forms": "Forms",
     "Active": "Active",
-    "Inactive": "Inactive"
+    "Inactive": "Inactive",
+    "Pinboard Username": "Pinboard Username",
+    "Pinboard password": "Pinboard password",
+    "Pinboard Token": "Pinboard Token"
 }
