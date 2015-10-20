@@ -28,9 +28,9 @@
                     <h3>Conversations</h3>
                     <nav class="icon-nav">
                         <ul>
-                            <li><a href="#"><img src="/assets/img/circle-icon--twitter.svg"></a></li>
-                            <li><a href="#"><img src="/assets/img/circle-icon--facebook.svg"></a></li>
-                            <li><a href="#"><img src="/assets/img/circle-icon--youtube.svg"></a></li>
+                            <li><a href="#"><?php perch_layout('icons/circle-icon--twitter')?></a></li>
+                            <li><a href="#"><?php perch_layout('icons/circle-icon--facebook')?></a></li>
+                            <li><a href="#"><?php perch_layout('icons/circle-icon--youtube')?></a></li>
                             
                         </ul>
                     </nav>

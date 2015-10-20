@@ -102,6 +102,36 @@
                         </li>
                     </ol>
                 </section> 
+                <form id="form1_comment" class="comment-form" action="/second-post" method="post">
+                    <fieldset>
+                       <legend><h2>Add a comment</h2></legend>
+                        <div>
+                            <label for="form1_commentName">Name</label>
+                            <input id="form1_commentName" name="commentName" type="text" required="required">
+                            
+                        </div>
+                        <div>
+                            <label for="form1_commentEmail">Email</label>
+                            <input id="form1_commentEmail" name="commentEmail" type="email" required="required">
+                            
+                            
+                        </div>
+                        <div>
+                            <label for="form1_commentURL">Website</label>
+                            <input id="form1_commentURL" name="commentURL" type="url">
+                        </div>
+                        <div>
+                            <label for="form1_commentHTML">Your Comment</label>
+                            <textarea id="form1_commentHTML" name="commentHTML" cols="30" rows="4" required="required"></textarea>
+                            
+                        </div>
+                        <div>
+                            <input id="form1_postID" name="postID" value="2" type="hidden">
+                            <input id="form1_submitComment" name="submitComment" value="Add your comment >" type="submit"><input type="hidden" name="cms-form" value="Y29tbWVudDpwZXJjaF9ibG9nOi90ZW1wbGF0ZXMvYmxvZy9jb21tZW50X2Zvcm0uaHRtbDoxNDQ1MzQ2MTgw">
+                        </div>
+
+                    </fieldset>
+                </form>
             </main>
             <aside class="sidebar">
                 <div class="widget">

@@ -19,12 +19,10 @@
 .widget__title {
 	color: $purple;
 	display: inline-block;
-	font-weight: $base-font-weight;
 	margin-top: 0;
 	font-family: $accent-font-family;
 	.main-footer & {
 		color: $white;
-		font-weight: $bold-font-weight;
 	}
 }
 

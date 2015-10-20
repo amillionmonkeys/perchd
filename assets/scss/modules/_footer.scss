@@ -5,6 +5,9 @@
 	padding-top: 4.688em;
 	a {
 		color: $white;
+		&:hover {
+			color: $pink;
+		}
 	}
 	h1, h2, h3, h4, h5 {
 		color: $white;

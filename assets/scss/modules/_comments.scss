@@ -34,5 +34,24 @@
 .comment__author {
 	margin-top: 0;
 	font-family: $base-font-family;
-	font-weight: $base-font-weight;
+}
+
+#form1_comment fieldset {
+	background-color: $white;
+	border: none;
+	label {
+		font-weight: $bold-font-weight;
+	}
+	@include media ($gt-medium) {
+		div:nth-child(2) {
+		width: 16.25em;
+		margin-right: 4.375em;
+	
+		}
+		div:nth-child(3) {
+			width: 16.25em;
+			
+			float: right;
+		}
+	}
 }
