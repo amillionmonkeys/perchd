@@ -105,16 +105,17 @@
                 <form id="form1_comment" class="comment-form" action="/second-post" method="post">
                     <fieldset>
                        <legend><h2>Add a comment</h2></legend>
-                        <div>
-                            <label for="form1_commentName">Name</label>
-                            <input id="form1_commentName" name="commentName" type="text" required="required">
+                        <div class="form-wrapper">
+                            <div>
+                                <label for="form1_commentName">Name</label>
+                                <input id="form1_commentName" name="commentName" type="text" required="required">
+                                
+                            </div>
+                            <div>
+                                <label for="form1_commentEmail">Email</label>
+                                <input id="form1_commentEmail" name="commentEmail" type="email" required="required">
                             
-                        </div>
-                        <div>
-                            <label for="form1_commentEmail">Email</label>
-                            <input id="form1_commentEmail" name="commentEmail" type="email" required="required">
-                            
-                            
+                            </div>
                         </div>
                         <div>
                             <label for="form1_commentURL">Website</label>
@@ -165,7 +166,7 @@
             </aside>
         </div>
         
-        <hr />
+       
 
        <footer class="main-footer">
             <div class="outer-container">

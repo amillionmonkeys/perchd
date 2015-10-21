@@ -13,8 +13,8 @@
 }
 
 .author__avatar {
-	height: 7.5em;
-	width: 7.5em;
+	width: 100%;
+	height: auto;
 	border-radius: 50%;
 	@include clearfix;
 	overflow: hidden;

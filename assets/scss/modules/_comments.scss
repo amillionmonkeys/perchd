@@ -1,5 +1,9 @@
 //Comments
 
+.comments {
+	margin-bottom: 4em;
+}
+
 .comments__list {
 	list-style: none;
 	padding-left: 0;
@@ -36,22 +40,35 @@
 	font-family: $base-font-family;
 }
 
+
 #form1_comment fieldset {
 	background-color: $white;
 	border: none;
+	legend {
+		margin-bottom: 0.75em;
+	}
 	label {
 		font-weight: $bold-font-weight;
+
 	}
-	@include media ($gt-medium) {
-		div:nth-child(2) {
-		width: 16.25em;
-		margin-right: 4.375em;
+}
 	
-		}
-		div:nth-child(3) {
-			width: 16.25em;
-			
-			float: right;
+#form1_comment fieldset { 
+	padding: 0;
+	@include media ($gt-medium) {
+		.form-wrapper {
+			@include clearfix;
+			div {
+				width: 16.56em;
+				float: left;
+				&:first-child {
+					float: right;
+				}
+			}
 		}
 	}
+}
+
+.comment-form {
+	margin-bottom: 4em;
 }
