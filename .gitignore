@@ -1,5 +1,4 @@
 .sass-cache
 *.css.map
 config.codekit
-assets/css
 config.local.php

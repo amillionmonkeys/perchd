@@ -13,6 +13,9 @@ select {
   font-size: $base-font-size;
 }
 
+legend {
+  @extend h2;
+}
 label {
   font-weight: 600;
   margin-bottom: $small-spacing / 2;

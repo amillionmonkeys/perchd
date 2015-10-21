@@ -11,14 +11,14 @@
 		        <div class="byline">
 		            <h3 class="comment__author">
 		        		<perch:if exists="commentURL"><a rel="nofollow" href="<perch:blog id="commentURL" type="url" label="URL" order="3" />"></perch:if>
-							<strong><perch:blog id="commentName" type="text" label="Name" order="1" required="true" />:</strong>
+							<perch:blog id="commentName" type="text" label="Name" order="1" required="true" />:
 						<perch:if exists="commentURL"></a></perch:if>
 					</h3>
 		        </div>
 		        <div class="comment__body">
 		            <perch:blog id="commentHTML" encode="false" html="true" type="textarea" label="Message (HTML)" order="4" required="true" />
 		        </div>
-		        <time datetime="2015-09-14"><perch:blog id="commentDateTime" format="l dS F Y H:i" type="date" time="true" label="Date" /></time>
+		        <time><em><perch:blog id="commentDateTime" format="l dS F Y H:i" type="date" time="true" label="Date" /></em></time>
 		    </div>
 		</li>
 <perch:after>

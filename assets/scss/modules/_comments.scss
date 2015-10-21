@@ -11,7 +11,7 @@
 
 .comment__item {
 	@include clearfix;
-	margin-bottom: 23m;
+	margin-bottom: 2em;
 }
 
 .comment__avatar {
@@ -41,7 +41,7 @@
 }
 
 
-#form1_comment fieldset {
+.comment-form fieldset {
 	background-color: $white;
 	border: none;
 	legend {
@@ -53,15 +53,15 @@
 	}
 }
 	
-#form1_comment fieldset { 
+.comment-form fieldset { 
 	padding: 0;
 	@include media ($gt-medium) {
 		.form-wrapper {
 			@include clearfix;
 			div {
-				width: 16.56em;
+				width: 45%;
 				float: left;
-				&:first-child {
+				&:last-child {
 					float: right;
 				}
 			}

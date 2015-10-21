@@ -1,0 +1,15 @@
+.style-guide {
+	border: 10px solid #ddd;
+	padding: 1em;
+	min-height: 100vh;
+}
+
+.outer-container {
+	/*background-color: #ddd;*/
+	margin-bottom: 1em;
+}
+
+.outer-container > div {
+	background-color: #fff;
+	border:1px solid #ddd;
+}
