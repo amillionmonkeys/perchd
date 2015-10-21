@@ -1,0 +1,16 @@
+<div class="tweet">
+	<a href="https://twitter.com/<perch:twitter id="tweetUser" />" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @<perch:twitter id="tweetUser" /></a>
+	<img src="<perch:twitter id="tweetUserAvatar" encode="false" />" alt="<perch:twitter id="tweetUser" />" class="avatar" />
+	<p class="user"><strong><perch:twitter id="tweetUserRealName" /></strong>
+	<br />@<perch:twitter id="tweetUser" /></p>
+	
+	<blockquote><p><perch:twitter id="tweetHTML" encode="false" /></p></blockquote>
+	
+	<div class="timestamp"><perch:twitter id="tweetDate" format="j M y h:i a" /></div>
+	
+	<div class="intents">
+	<a class="twitter-reply" href="https://twitter.com/intent/tweet?in_reply_to=<perch:twitter id="tweetTwitterID" />">Reply</a>
+	<a class="twitter-retweet" href="https://twitter.com/intent/retweet?tweet_id=<perch:twitter id="tweetTwitterID" />">Retweet</a>
+	<a class="twitter-fav" href="https://twitter.com/intent/favorite?tweet_id=<perch:twitter id="tweetTwitterID" />">Favorite</a>
+	</div>
+</div>

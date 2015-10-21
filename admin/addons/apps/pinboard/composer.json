@@ -1,0 +1,9 @@
+{
+	"config": {
+        "vendor-dir": "lib/vendor",
+        "preferred-install": "dist"
+    },
+    "require": {
+        "kijin/pinboard-api": "dev-master"
+    }
+}

@@ -1,0 +1,30 @@
+<perch:form id="subscribe" app="perch_mailchimp" double-optin="false" action="#subscribe-widget" send-welcome="true" prefix="none">
+
+	<perch:success>
+		<p>Great. You're in. We'll be in touch!</p>
+	</perch:success>
+
+	<div>
+		<perch:label for="email">Email *</perch:label>
+		<perch:input id="email" required="true" type="email" mailer="email" />
+		<perch:error type="required" for="email">Required</perch:error>
+	</div>
+	<div class="form-name">
+		<div>
+			<perch:label for="firstname">First name</perch:label>
+			<perch:input id="firstname" required="false" type="text" mailer="FNAME" />
+			<perch:error type="required" for="firstname">Required</perch:error>
+		</div>
+		<div>
+			<perch:label for="lastname">Last name</perch:label>
+			<perch:input id="lastname" required="false" type="text" mailer="LNAME" />
+			<perch:error type="required" for="lastname">Required</perch:error>
+		</div>
+	</div>
+	
+	<div>
+		<perch:input type="submit" value="Submit" class="btn" id="btnsubmit" />
+		<perch:input type="hidden" value="1" id="confirm" mailer="confirm_subscribe" />
+	</div>	
+
+</perch:form>

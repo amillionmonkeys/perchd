@@ -1,0 +1,25 @@
+<perch:before>
+	<ul>
+</perch:before>
+	<li>
+		<h2>
+			<a href="<perch:mailchimp id="campaignURL" type="text" />">
+				<perch:mailchimp id="campaignSubject" type="text" />
+			</a>
+		</h2>
+		<p><perch:mailchimp id="campaignSendTime" type="date" format="d F Y" /></p>
+	</li>
+<perch:after>
+	</ul>
+	<perch:if exists="paging">
+		<div class="paging">
+			Page <perch:mailchimp id="current_page" type="hidden" /> of <perch:mailchimp id="number_of_pages" type="hidden" />
+			<perch:if exists="not_first_page">
+				<a href="<perch:mailchimp id="prev_url" type="hidden" encode="false" />">Previous</a>
+			</perch:if>
+			<perch:if exists="not_last_page">
+				<a href="<perch:mailchimp id="next_url" type="hidden" encode="false" />">Next</a>
+			</perch:if>
+		</div>
+	</perch:if>
+</perch:after>
