@@ -744,6 +744,14 @@ fieldset {
   margin: 0 0 0.75em;
   padding: 1.5em; }
 
+input[type="checkbox"] {
+  margin-bottom: 1em; }
+
+input[type="checkbox"] + label {
+  display: inline-block;
+  padding-left: 0.5em;
+  margin: 0; }
+
 input,
 label,
 select {
@@ -1200,19 +1208,19 @@ th {
   .comment-form fieldset label {
     font-weight: 700; }
 
-.comment-form fieldset {
+fieldset {
   padding: 0; }
-  @media screen and (min-width: 769px) {
-    .comment-form fieldset .form-wrapper::after {
-      clear: both;
-      content: "";
-      display: table; }
-    .comment-form fieldset .form-wrapper div {
-      width: 45%;
-      float: left; }
-      .comment-form fieldset .form-wrapper div:last-child {
-        float: right; } }
 
+@media screen and (min-width: 769px) {
+  .form-wrapper::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .form-wrapper div {
+    width: 45%;
+    float: left; }
+    .form-wrapper div:last-child {
+      float: right; } }
 .comment-form {
   margin-bottom: 4em; }
 

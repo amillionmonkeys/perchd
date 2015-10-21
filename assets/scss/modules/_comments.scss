@@ -53,8 +53,9 @@
 	}
 }
 	
-.comment-form fieldset { 
+fieldset { 
 	padding: 0;
+}
 	@include media ($gt-medium) {
 		.form-wrapper {
 			@include clearfix;
@@ -67,7 +68,6 @@
 			}
 		}
 	}
-}
 
 .comment-form {
 	margin-bottom: 4em;
