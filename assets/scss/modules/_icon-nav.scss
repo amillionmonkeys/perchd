@@ -41,6 +41,10 @@
 
 .no-flexbox .icon-nav ul li {
 	float:left;
+	width: 33.33%;
+	&:last-child {
+		padding-right: 1em;
+	}
 }
 
 .icon-nav__icon {

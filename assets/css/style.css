@@ -1067,7 +1067,10 @@ th {
           display: block; } }
 
 .no-flexbox .icon-nav ul li {
-  float: left; }
+  float: left;
+  width: 33.33%; }
+  .no-flexbox .icon-nav ul li:last-child {
+    padding-right: 1em; }
 
 .icon-nav__icon {
   float: left;
