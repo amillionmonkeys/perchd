@@ -1274,7 +1274,7 @@ fieldset {
 .search-form {
   position: relative;
   margin: 1.77em auto;
-  width: 50%;
+  width: 100%;
   font-size: 15px;
   font-size: 0.9375rem; }
   @media screen and (min-width: 769px) {

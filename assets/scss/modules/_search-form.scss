@@ -2,7 +2,7 @@
 .search-form {
   position: relative;
   margin: 1.77em auto;
-  width: 50%;
+  width: 100%;
   @include font-size(15px);
   @include media($gt-medium) {
     width: 100%;
