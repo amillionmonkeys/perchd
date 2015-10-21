@@ -1,6 +1,6 @@
 .post__title {
+	margin-top: 0;
 	color: $purple;
-	font-weight: $base-font-weight;
 	a {
 		color: $purple;
 	}
@@ -25,4 +25,13 @@
 .tags input.btn--secondary {
 	border-color: $purple;
 	color: $purple;
+}
+
+code {
+	background-color: $light-gray;
+}
+pre {
+	border-left: 4px solid $purple;
+	padding: 1em 1em 1em 1.5em;
+	background-color: $light-gray;
 }

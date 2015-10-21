@@ -1,30 +1,21 @@
 <aside class="sidebar">
-    <div class="widget">
+    <div class="widget widget--twitter">
         <div class="widget__header">
-            <h2 class="widget__title"><?php perch_layout('icons/icon--gallery')?> Gallery</h2>
+            <div class="widget__title"><h3><?php perch_layout('icons/icon--twitter')?> Twitter</div>
         </div>
         <div class="widget__content">
-           <img src="http://placehold.it/400x300" alt="cool site" />
+        <?php perch_twitter_get_latest(); ?>
         </div>
     </div>
-    <div class="widget">
+
+    <div class="widget widget--subscribe">
         <div class="widget__header">
-            <h2 class="widget__title"><?php perch_layout('icons/icon--rss')?> Subscribe</h2>
+            <div class="widget__title"><h3><?php perch_layout('icons/icon--rss')?> Subscribe</h3></div>
         </div>
         <div class="widget__content">
-            <p>Get a summary of perchd.io articles in your inbox each week.</p>
-            <form action="/" class="form--subscribe">
-                <input type="email" placeholder="Your email address" />
-                <input type="submit" vale="subscribe" />
-            </form>
+            <p>Get a weekly summary of perchd.io articles and news.</p>
+            <?php perch_mailchimp_form('subscribe.html'); ?>
         </div>
     </div>
-    <div class="widget  widget--advert">
-        <div class="widget__header">
-            <h2 class="widget__title"><?php perch_layout('icons/icon--gallery')?> Advert</h2>
-        </div>
-        <div class="widget__content">
-            <img src="http://placehold.it/400x400" alt="Great advert">
-        </div>
-    </div>
+
 </aside>

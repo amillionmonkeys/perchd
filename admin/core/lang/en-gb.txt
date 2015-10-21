@@ -792,5 +792,7 @@
     "%sLog in%s": "%sLog in%s",
     "Errors": "Errors",
     "Your resources folder is not writable. Make this folder (<code>": "Your resources folder is not writable. Make this folder (<code>",
-    "<\/code>) writable if you want to upload a custom logo.": "<\/code>) writable if you want to upload a custom logo."
+    "<\/code>) writable if you want to upload a custom logo.": "<\/code>) writable if you want to upload a custom logo.",
+    "Pinboard Username": "Pinboard Username",
+    "Pinboard Token": "Pinboard Token"
 }

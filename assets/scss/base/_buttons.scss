@@ -23,10 +23,12 @@ button {
   vertical-align: middle;
   white-space: nowrap;
   outline: 0;
+  transition: color 0.2s linear;
   &:hover,
   &:focus {
     background-color: $button-primary--hover;
     color: #fff;
+    
   }
   &:disabled {
     cursor: not-allowed;
@@ -42,20 +44,28 @@ button {
   &.btn--secondary {
     color: $button-secondary;
     background-color: $button-secondary-bkg;
-    border: 2px solid $button-secondary-border;
+    border: $button-secondary-border;
+    transition: background-color 0.2s linear, color 0.2s linear;
     &:hover,
-    &:focus {
-      background-color: $button-secondary--hover;
+    &:focus,
+    &.active {
+      background-color: $pink;
+      color: $white;
+
+
+      
     }
   }
   &.btn--inverse {
     color: $button-inverse;
     background-color: $button-inverse-bkg;
     border: $button-inverse-border;
+    transition: border 0.2s linear, color 0.2s linear;
     &:hover,
     &:focus {
       color: $button-inverse-hover;
       border: 2px solid $button-inverse-hover;
+      
     }
   }
 }
@@ -63,4 +73,8 @@ button {
 .button--transparent {
   background-color: transparent!important;
   border: none;
+}
+
+.main-footer .btn {
+  @extend .btn--inverse
 }

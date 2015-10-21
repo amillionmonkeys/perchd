@@ -80,6 +80,10 @@ select {
     margin-bottom: $base-spacing;
 }
 
+.js .form-name {
+  display: none;
+}
+
 .input-group {
   position: relative;
   display: table;

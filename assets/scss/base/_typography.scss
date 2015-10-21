@@ -18,6 +18,7 @@ h5 {
   margin-top: $small-spacing;
   margin-bottom: $small-spacing;
   color: $purple;
+  font-weight: $base-font-weight;
 }
 
 h4, h5 {
@@ -62,7 +63,7 @@ p {
 a {
   color: $action-color;
   text-decoration: none;
-  transition: color 0.1s linear;
+  transition: color 0.2s linear;
 
   &:active,
   &:focus,

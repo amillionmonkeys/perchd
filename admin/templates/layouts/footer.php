@@ -10,16 +10,14 @@
                     </ul>
                 </div>
                 <div class="footer__column">
-                    <div class="widget">
+                    <div id="subscribe-widget" class="widget widget--subscribe">
                         <div class="widget__header">
                             <div class="widget__title"><h3>Subscribe</h3></div>
                         </div>
                         <div class="widget__content">
-                            <p>Get a summary of perchd.io articles in your inbox each week.</p>
-                            <form action="/" class="form--subscribe">
-                                <input type="email" placeholder="Your email address" />
-                                <input type="submit" class="btn--inverse" value="Don't miss out >" />
-                            </form>
+                            <p>Get a weekly summary of perchd.io articles and news.</p>
+                            <?php perch_mailchimp_form('subscribe.html'); ?>
+                            
                         </div>
                     </div>
                             
@@ -29,9 +27,9 @@
                     <nav class="icon-nav">
                         <ul>
                             <li><a href="http://twitter.com/perchdio"><?php perch_layout('icons/circle-icon--twitter'); ?></a></li>
-                            <li><a href="#"><?php perch_layout('icons/circle-icon--facebook'); ?></a></li>
                             <li><a href="http://youtube.com/perchdio"><?php perch_layout('icons/circle-icon--youtube'); ?></a></li>
-                            
+                            <li><a href="mailto:hello@perchd.io"><?php perch_layout('icons/circle-icon--mail'); ?></a></li>
+
                         </ul>
                     </nav>
                 </div>
@@ -50,5 +48,3 @@
         <script src="/assets/js/min/scripts-min.js"></script>
     </body>
 </html>
-
-    <?php PerchUtil::output_debug(); ?>

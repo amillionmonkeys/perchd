@@ -39,7 +39,6 @@
 	}
 }
 
-
 .icon-nav__icon {
 	@include span-columns(3);
 	@include media($gt-medium) {
@@ -56,5 +55,12 @@
 		width: 100%;
 		text-align: center;
 		margin-top: 0.5em;
+		padding-left: 0;
 	}
 }
+
+.main-footer .icon-nav li:hover svg * {
+	fill: $pink;	
+	transition: fill 0.2s;
+}
+

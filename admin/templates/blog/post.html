@@ -36,7 +36,7 @@
 
     <div class="tags">
         <perch:categories id="categories" set="blog" label="Categories" display-as="checkboxes">
-            <a class="btn--secondary" href="archive.php?cat=<perch:category id="catSlug" type="slug" />" class="p-category">
+            <a class="btn--secondary" href="/archive/<perch:category id="catSlug" type="slug" />" class="p-category">
                 <perch:category id="catTitle" type="text" />
             </a>
         </perch:categories>

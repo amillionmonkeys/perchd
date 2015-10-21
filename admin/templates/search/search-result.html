@@ -1,27 +1,27 @@
 <perch:before>
-    <h1>Search results for &#8220;<perch:search id="search_key" />&#8221;</h1>
+    <h2>Search results for &#8220;<perch:search id="search_key" />&#8221;</h2>
 
     <perch:if exists="paging">
         <p><perch:search id="total" /> results</p>
     </perch:if>
-        <ul>
 </perch:before>
 
-        <li class="<perch:search id="perch_item_odd" />">
-            <h2><a href="<perch:search id="result_url" />"><perch:search id="result_title" /></a></h2>
-            <perch:if exists="result_excerpt"><p class="excerpt">&hellip;<perch:search id="result_excerpt" encode="false" />&hellip;</p></perch:if>
-            <p><a href="<perch:search id="result_url" />">
-                <perch:if exists="result_pageNavText">
-                    <perch:search id="result_pageNavText" />
-                <perch:else />
-                    <perch:search id="result_url" />
-                </perch:if>
-                </a></p>
-        </li>
+<article class="post">
+    <header class="post__header">
+        <h3 class="post__title"><a href="<perch:search id="result_url" />"><perch:search id="result_title" /></a></h3>
+    </header>
+    
+    <div class="post__content">
+        <perch:if exists="result_excerpt"><p class="excerpt">&hellip;<perch:search id="result_excerpt" encode="false" />&hellip;</p></perch:if>
+    </div>
+    <a class="button" href="<perch:search id="result_url" />">
+        Read more &raquo;
+    </a>  
+</article>
+
+<hr />
 
 <perch:after>
-    </ul>
-
     <perch:if exists="paging">
         <div class="paging">
             Page <perch:search id="current_page" /> of <perch:search id="number_of_pages" />
@@ -43,6 +43,11 @@
         <h1>Search</h1>
     </perch:if>
     <perch:if exists="search_key">
-        <p>Sorry, there are no results for &#8220;<perch:search id="search_key" />&#8221;.</p>
+        <article class="post">
+            <p>Sorry, there are no results for &#8220;<perch:search id="search_key" />&#8221;.</p>
+            <p>That's probably because we're new round these parts and haven't got round to it yet but maybe you could help us out and suss out what you're searching for yourself, then write about an article for perchd.io?</p>
+            <p>If you're interested, please <a href="/contact">get in touch</a>.
+        </article>
+        <hr />
     </perch:if>
 </perch:noresults>

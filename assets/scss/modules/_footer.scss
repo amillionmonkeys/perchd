@@ -1,10 +1,14 @@
 .main-footer {
 	background-color: $purple;
 	border: none;
-	color: $white;
+	color: rgba($white, 0.4);
 	padding-top: 4.688em;
+	padding-bottom: 0.75em;
 	a {
-		color: $white;
+		color: inherit;
+		&:hover {
+			color: $pink;
+		}
 	}
 	h1, h2, h3, h4, h5 {
 		color: $white;
@@ -13,7 +17,6 @@
 
 .copyright-notice {
 	text-align: center;
-	opacity: 0.4;
 	@include font-size(14px);
 }
 

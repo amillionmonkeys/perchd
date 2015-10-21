@@ -19,15 +19,19 @@
 .widget__title {
 	color: $purple;
 	display: inline-block;
-	font-weight: $base-font-weight;
 	margin-top: 0;
 	font-family: $accent-font-family;
 	.main-footer & {
 		color: $white;
-		font-weight: $bold-font-weight;
 	}
 }
 
+.widget__title h3 {
+	display: flex;
+}
+.widget__title svg {
+	margin-right: 0.25em;
+}
 .widget__content {
 	margin-top: 0;
 	p:first-child {
@@ -35,3 +39,22 @@
 	}
 }
 
+.tweet__content {
+	margin: 0;
+	padding: 0;
+}
+
+.tweet__meta {
+	@include font-size(14px);
+	color: $medium-gray;
+	display: flex;
+    justify-content: space-between;
+    padding-right: 1em;
+}
+.intents svg * {
+	fill: $medium-gray;
+	transition: all 0.2s
+}
+.intents svg:hover * {
+	fill: $purple;
+}

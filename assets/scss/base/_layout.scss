@@ -12,16 +12,15 @@
 }
 
 .main-body {
-	// @include media($gt-medium) {
-	// 	@include span-columns(8);
-	// }
+	@include media($gt-medium) {
+		@include span-columns(8);
+	}
 }
 
 .sidebar {
-	display: none;
-	// @include media($gt-medium) {
-	// 	@include span-columns(4);
-	// }
+	@include media($gt-medium) {
+		@include span-columns(4);
+	}
 }
 
 .footer__column {
@@ -42,4 +41,5 @@
 
 .main-body, .sidebar {
 	padding-top: 4.25em;
+	padding-bottom: 4.25em;
 }
