@@ -10,7 +10,7 @@
             <main class="main-body">
                 <h2 class="page-title">Latest Perch tutorials, tips &amp; insights</h2>
                 <?php perch_blog_custom(array(
-                    'count' => 1,
+                    'count' => 10,
                     'template' => 'post_in_list.html',
                     'sort' => 'postDateTime',
                     'sort-order' => 'DESC',

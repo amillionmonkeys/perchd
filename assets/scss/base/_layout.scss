@@ -41,5 +41,7 @@
 
 .main-body, .sidebar {
 	padding-top: 4.25em;
-	padding-bottom: 4.25em;
+	@include media($gt-medium) {
+		padding-bottom: 4.25em;
+	}
 }

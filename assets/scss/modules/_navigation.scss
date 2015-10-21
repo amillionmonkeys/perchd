@@ -64,6 +64,8 @@
   -webkit-touch-callout: none;
   user-select: none;
   display: block;
+  border-top: $nav-border;
+  line-height: 2.6em;
   text-align: center;
 }
 

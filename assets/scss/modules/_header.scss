@@ -15,13 +15,16 @@
 }
 
 .logo {
-	float:left;
 	width: 100%;
+
 	h1 {
-		text-align: center;
+	padding-top: 0.75em;		text-align: center;
 		color: $white;
+		margin-top: 0;
 	}
 	@include media($gt-medium){
+		float:left;
+
 		width: auto;
 		text-align: left;
 	}
