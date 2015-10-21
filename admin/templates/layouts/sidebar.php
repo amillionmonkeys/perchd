@@ -1,7 +1,7 @@
 <aside class="sidebar">
     <div class="widget widget--twitter">
         <div class="widget__header">
-            <div class="widget__title"><h3><?php perch_layout('icons/icon--twitter')?> Twitter</div>
+            <div class="widget__title"><h3><?php perch_layout('icons/icon--twitter')?> Twitter</h3</div>
         </div>
         <div class="widget__content">
         <?php perch_twitter_get_latest(); ?>

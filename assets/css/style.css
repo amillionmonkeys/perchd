@@ -1066,6 +1066,9 @@ th {
         .icon-nav ul li a {
           display: block; } }
 
+.no-flexbox .icon-nav ul li {
+  float: left; }
+
 .icon-nav__icon {
   float: left;
   display: block;

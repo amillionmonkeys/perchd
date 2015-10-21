@@ -39,6 +39,10 @@
 	}
 }
 
+.no-flexbox .icon-nav ul li {
+	float:left;
+}
+
 .icon-nav__icon {
 	@include span-columns(3);
 	@include media($gt-medium) {
