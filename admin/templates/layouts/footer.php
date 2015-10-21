@@ -27,7 +27,7 @@
                     <nav class="icon-nav">
                         <ul>
                             <li><a href="http://twitter.com/perchdio"><?php perch_layout('icons/circle-icon--twitter'); ?></a></li>
-                            <li><a href="http://youtube.com/perchdio"><?php perch_layout('icons/circle-icon--youtube'); ?></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCnXiQiwhLY3wLlBvCsCg3Rg"><?php perch_layout('icons/circle-icon--youtube'); ?></a></li>
                             <li><a href="mailto:hello@perchd.io"><?php perch_layout('icons/circle-icon--mail'); ?></a></li>
 
                         </ul>
