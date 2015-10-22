@@ -5,7 +5,6 @@ if ($('.main-nav').length>0) {
     responsiveNav(".main-nav");
 }
 
-
 $('.widget--subscribe input').focus(function(){
 	$(this).parent().siblings('.form-name').slideDown();
 });

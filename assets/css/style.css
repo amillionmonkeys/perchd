@@ -1070,7 +1070,7 @@ th {
   float: left;
   width: 33.33%; }
   .no-flexbox .icon-nav ul li:last-child {
-    padding-right: 1em; }
+    padding-right: 1em !important; }
 
 .icon-nav__icon {
   float: left;
@@ -1246,12 +1246,12 @@ th {
   margin-top: 0;
   font-family: "adelle-sans", sans-serif; }
 
-.comment-form fieldset {
+fieldset {
   background-color: #fff;
   border: none; }
-  .comment-form fieldset legend {
+  fieldset legend {
     margin-bottom: 0.75em; }
-  .comment-form fieldset label {
+  fieldset label {
     font-weight: 700; }
 
 fieldset {

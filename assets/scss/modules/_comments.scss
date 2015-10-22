@@ -41,7 +41,7 @@
 }
 
 
-.comment-form fieldset {
+fieldset {
 	background-color: $white;
 	border: none;
 	legend {
@@ -56,18 +56,18 @@
 fieldset { 
 	padding: 0;
 }
-	@include media ($gt-medium) {
-		.form-wrapper {
-			@include clearfix;
-			div {
-				width: 45%;
-				float: left;
-				&:last-child {
-					float: right;
-				}
+@include media ($gt-medium) {
+	.form-wrapper {
+		@include clearfix;
+		div {
+			width: 45%;
+			float: left;
+			&:last-child {
+				float: right;
 			}
 		}
 	}
+}
 
 .comment-form {
 	margin-bottom: 4em;
