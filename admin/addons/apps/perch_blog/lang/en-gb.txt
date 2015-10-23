@@ -210,5 +210,6 @@
     "Draft": "Draft",
     "": "",
     "Update Blog": "Update Blog",
-    "Default": "Default"
+    "Default": "Default",
+    "Video": "Video"
 }

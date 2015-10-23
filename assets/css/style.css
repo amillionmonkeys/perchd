@@ -555,7 +555,6 @@ hr {
   margin: 0.75em 0; }
 
 img {
-  width: 100%;
   height: auto; }
 
 img,
@@ -568,7 +567,8 @@ picture {
   padding-bottom: 56.25%;
   /* 16:9 */
   padding-top: 25px;
-  height: 0; }
+  height: 0;
+  margin: 2em; }
 
 .video-wrapper iframe {
   position: absolute;
@@ -1346,6 +1346,25 @@ fieldset {
 
 .post--extended .post__content h1, .post--extended .post__content h2, .post--extended .post__content legend, .post--extended .post__content h3, .post--extended .post__content h4, .post--extended .post__content h5 {
   font-family: "adelle-sans", sans-serif; }
+
+.post__content::after {
+  clear: both;
+  content: "";
+  display: table; }
+
+.post__content .button {
+  clear: both; }
+
+.post__thumbnail {
+  padding: 1em 0; }
+  @media screen and (min-width: 769px) {
+    .post__thumbnail {
+      float: left;
+      width: 33.33%; }
+      .post__thumbnail ~ div {
+        padding-left: 2em;
+        float: right;
+        width: 66.66%; } }
 
 .tags {
   padding: 2em 0; }

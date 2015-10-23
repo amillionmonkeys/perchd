@@ -9,9 +9,16 @@
     </header>
     
     <div class="post__content">
-        <perch:blog id="excerpt" type="textarea" textile="true" />
+        <perch:if exists="video">
+        <div class="post__thumbnail">
+            <img src="//img.youtube.com/vi/<perch:blog id="video" type="youtube" output="youtubeID" />/0.jpg" alt="<perch:blog id="video" type="youtube" output="title" />" />
+        </div>
+        </perch:if>
+        <div>
+        <perch:blog id="excerpt" type="textarea" textile="true" /> 
+        </div>
     </div>
-    <a href="<perch:blog id="postURL" />" class="button">Read more &raquo;</a>  
+    <a href="<perch:blog id="postURL" />" class="button">Read more &raquo;</a> 
 </article>
 <hr />
 <perch:after>

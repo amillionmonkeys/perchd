@@ -16,6 +16,26 @@
 	}
 }
 
+.post__content {
+	@include clearfix();
+}
+
+.post__content .button {
+	clear:both;
+}
+.post__thumbnail {
+	padding: 1em 0;
+	@include media($gt-medium){
+		float:left;
+		width: 33.33%;
+		~ div {
+			padding-left: 2em;
+			float:right;
+			width: 66.66%;
+		}
+	}
+}
+
 //Tags
 
 .tags {

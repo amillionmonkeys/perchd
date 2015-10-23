@@ -1,0 +1,52 @@
+    <header class="post__header">
+        <h2 class="post__title">
+         <a href="<perch:blog id="postURL" type="hidden" />" rel="bookmark" class="p-name">
+            <perch:blog id="postTitle" type="text" label="Title" required="true" size="xl autowidth" order="1" />
+        </a>
+        </h2>
+        <div class="post__byline">
+            <time class="dt-published" datetime="<perch:blog id="postDateTime" type="date" label="Date" time="true" format="Y-m-d H:i:s" divider-before="Meta information" />">
+                <perch:blog id="postDateTime" type="date" time="true" format="l dS F Y" /> 
+            </time>
+        </div>
+    </header>
+    
+    <div class="post__content">
+        <div class="video-wrapper">
+            <perch:blog id="video" type="youtube" width="1000" label="YouTube URL" output="embed" />
+        </div>
+        <perch:blog id="postDescHTML" type="textarea" label="Post" order="2" editor="markitup" markdown="true" size="xxl autowidth" required="true" />
+    </div>  
+</article>
+
+<hr />
+
+<footer class="post-footer">
+    <div class="author">
+        <div class="author__sidebar">
+            <div class="author__avatar">
+                    <img src="//www.gravatar.com/avatar/<perch:blog id="authorEmail" hash="md5" type="hidden" />?s=280&amp;d=mm" width="140" height="140" alt="<perch:blog id="authorGivenName" type="hidden" /> <perch:blog id="authorFamilyName" type="hidden" />" />
+            </div>
+        </div>
+        <div class="author__main">
+            <h2 class="author__name"><perch:blog id="authorGivenName" type="hidden" /> <perch:blog id="authorFamilyName" type="hidden" /></h2>
+            <div class="author__bio">
+                <perch:blog id="author_biog" type="hidden" html="true" />
+            </div>
+        </div>
+    </div>
+    <hr />
+
+    <div class="tags">
+        <perch:categories id="categories" set="blog" label="Categories" display-as="checkboxes">
+            <a class="btn--secondary" href="/archive/<perch:category id="catSlug" type="slug" />" class="p-category">
+                <perch:category id="catTitle" type="text" />
+            </a>
+        </perch:categories>
+    </div>
+
+    <hr />
+
+</footer>
+
+<perch:blog id="excerpt" type="textarea" label="Excerpt" markdown="true" order="3" suppress="true" size="s" />
