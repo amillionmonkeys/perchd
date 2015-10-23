@@ -1,4 +1,7 @@
 <?php 
+    
+    perch_blog_check_preview();
+    
     $post = perch_blog_post(perch_get('s'), true);
 
     if(!$post) header('Location: /errors/404');
