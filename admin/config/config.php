@@ -2,7 +2,6 @@
 
     include(__DIR__.'/config.local.php');  
 
-    define('PERCH_LICENSE_KEY', 'R21509-EUP837-SPK898-CBR101-VWA010');
     define('PERCH_EMAIL_FROM', 'phil@amillionmonkeys.co.uk');
     define('PERCH_EMAIL_FROM_NAME', 'Phil Smith');
 
