@@ -20,6 +20,16 @@
 	@include clearfix();
 }
 
+.post__content h2,
+.post__content h3,
+.post__content h4 {
+	margin-top: 1.25em;
+}
+
+.post__content h4 {
+	font-weight: $bold-font-weight;
+}
+
 .post__content .button {
 	clear:both;
 }

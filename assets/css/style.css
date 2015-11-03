@@ -1352,6 +1352,14 @@ fieldset {
   content: "";
   display: table; }
 
+.post__content h2, .post__content legend,
+.post__content h3,
+.post__content h4 {
+  margin-top: 1.25em; }
+
+.post__content h4 {
+  font-weight: 700; }
+
 .post__content .button {
   clear: both; }
 
