@@ -8,5 +8,6 @@
 		'perch_members',
 		'pinboard',
 		'perch_mailchimp',
-		'perch_twitter'
+		'perch_twitter',
+		'listing'
 	);

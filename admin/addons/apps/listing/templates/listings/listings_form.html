@@ -1,0 +1,22 @@
+<perch:form id="listing" method="post" app="listing">
+	<fieldset>
+	   <legend>Submit your listing</legend>
+		
+		<div>
+			<perch:label for="listingTitle">Listing Title</perch:label>
+			<perch:input type="text" id="listingTitle" label="Listing Title" required="true" helper="Listings::check_title_exists" />
+			<perch:error for="listingTitle" type="helper"><p>We already have a listing with that title.</p></perch:error>
+
+		</div>
+		<div>
+			<perch:input type="hidden" id="memberID" value="<perch:listing id="memberID" />" />
+			<perch:input type="hidden" id="listingType" value="listing" />
+			<perch:input type="submit" value="Submit" />
+		</div>
+
+    </fieldset>
+	<perch:success>
+		<p>Thank you. Your entry has been submitted and will appear on the site once approved.</p>
+	</perch:success>
+
+</perch:form>
