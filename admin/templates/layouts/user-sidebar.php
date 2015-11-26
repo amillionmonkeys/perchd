@@ -2,7 +2,7 @@
 
     <div class="widget widget--user">
         <div class="widget__header">
-            <div class="widget__title"><h3><?php perch_layout('icons/icon--user')?> User</h3></div>
+            <div class="widget__title"><h3><?php perch_layout('icons/icon--user')?> User</h3><hr /></div>
             
         </div>
         <div class="widget__content">

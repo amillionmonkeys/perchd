@@ -39,6 +39,8 @@
                         </li>
                     <?php }?>
                 </ul>
+                <a class="button" href="/user/register">Get on the list</a>
+
             </main>
             <?php perch_layout('sidebar'); ?>
         </div>
