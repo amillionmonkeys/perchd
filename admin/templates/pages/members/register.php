@@ -12,7 +12,11 @@
             <main class="main-body">
                 <?php 
 					if (perch_member_logged_in()) {
-						echo '<p>You are already logged in.</p>';			
+						echo '<h1>Welcome '.perch_member_get('first_name').'!</h1>';
+                        perch_member_form('profile.html');
+                        echo '<br />';
+                        echo '<h2>Update your password</h2>';
+                        perch_member_form('password.html');			
 					}else{
 						echo '<h1>Register</h1>';
 						perch_member_form('register.html');
