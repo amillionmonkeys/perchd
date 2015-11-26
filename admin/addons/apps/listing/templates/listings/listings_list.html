@@ -1,0 +1,24 @@
+<perch:before>
+	<table>
+		<thead>
+			<th>Listing Title</th>
+			<th>Sumission Date</th>
+			<th>Status</th>
+		</thead>
+</perch:before>
+<tr>
+	<td>
+		<a href="/listing/<perch:listing id="listingSlug" type="hidden" />">
+			<perch:listing id="listingTitle" type="text"  />
+		</a>
+	</td>
+	<td>
+		<perch:listing id="listingDateTime" format="%d %b %Y" type="date" />
+	</td>
+	<td>
+		<perch:listing id="listingStatus" type="text" />
+	</td>
+</tr>
+<perch:after>
+	</table>
+</perch:after>

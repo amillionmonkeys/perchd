@@ -9,6 +9,7 @@
                 if (perch_member_logged_in()) {
             ?>  
                 <ul>
+                    <li><a href="/user/apps">My Apps</a></li>
                     <li><a href="/user/profile">Edit profile</a></li>
                     <li><a href="/user/logout">Log out</a></li>
                 </ul>

@@ -1,10 +1,12 @@
 <perch:before>
 	<ul class="listing">
 </perch:before>
-		<perch:listing id="listingSlug" type="hidden" />
+		<perch:listing id="listingSlug" type="hidden"  suppress="true"/>
 		<li id="listing-<perch:listing id="listingID" type="hidden" />">			
 			<div class="listing">
-				<perch:listing id="listingTitle" type="text" label="Title" required="true"/>
+				<a href="apps/<perch:listing id="listingSlug" type="hidden" />">
+					<perch:listing id="listingTitle" type="text" label="Title" required="true" />
+				</a>
 			</div>
 			<perch:listing type="text" id="listingURL" label="Listing URL" required="true" />
 

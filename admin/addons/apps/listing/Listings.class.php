@@ -8,7 +8,7 @@ class Listings extends PerchAPI_Factory
 
 	protected $default_sort_column = 'listingDateTime';
 
-	public $static_fields   = array('listingId', 'listingSlug', 'listingTitle', 'listingType', 'listingDateTime', 'listingHTML', 'listingStatus', 'listingDynamicFields');
+	public $static_fields   = array('listingID', 'listingSlug', 'listingTitle', 'listingType', 'listingDateTime', 'listingHTML', 'listingStatus', 'listingDynamicFields');
 
 	/**
 	 * Get count of listing of the given type.
@@ -34,7 +34,7 @@ class Listings extends PerchAPI_Factory
 	 * @param string $status
 	 * @param string $Paging
 	 * @return void
-	 * @author Drew McLellan
+	 * @author Phil Smith
 	 */
 	public function get_by_status($status='pending', $Paging=false)
 	{
@@ -86,7 +86,7 @@ class Listings extends PerchAPI_Factory
 	}
 
 
-	public function get_custom($listingType, $opts)
+	public function get_custom($listingType, $opts, $listingStatus=false)
 	{
 		$filter_type = 'php';
 		$single_mode = false;
@@ -98,7 +98,9 @@ class Listings extends PerchAPI_Factory
 		$sql = ' * FROM '.$this->table;
 
 		$where[] = 'listingType='.$this->db->pdb($listingType);
-		$where[] = 'commentStatus='.$this->db->pdb('LIVE');
+		if($listingStatus){
+			$where[] = 'listingStatus='.$this->db->pdb($listingStatus);			
+		}
 
 
 		if (isset($opts['_id'])) {
@@ -398,9 +400,9 @@ class Listings extends PerchAPI_Factory
 
 	    // template
 	    if (isset($opts['template'])) {
-	        $template = 'listing/'.$opts['template'];
+	        $template = 'listings/'.$opts['template'];
 	    }else{
-	        $template = 'listing/listing.html';
+	        $template = 'listings/listing.html';
 	    }
 
 	   	// Paging to template
@@ -488,20 +490,43 @@ class Listings extends PerchAPI_Factory
 			$data[$key] = $val;
 
 		}
+		// print_r($data);
+		// die();
 
-		$r = $this->create($data);
+		if(isset($data['listingID'])){
+			if ($this->check_title_exists($data['listingTitle'], $data['listingID'])){
+				$Listings = new Listings($API);
+	            $Listing = $Listings->find($data['listingID']);
+
+	            // Don't allow people to change their URL
+				unset($data['listingSlug']);
+				$r = $Listing->update($data);
+			} else {
+				$SubmittedForm->throw_error('duplicate', 'listingTitle');
+				return false;
+			}
+		} else {
+			if ($this->check_title_exists($data['listingTitle'])){
+				$r = $this->create($data);
+			} else {
+				$SubmittedForm->throw_error('duplicate', 'listingTitle');
+				return false;
+			}
+		}
 
 		return $r;
 		
-		PerchUtil::debug($SubmittedForm);
+		PerchUtil::debug('this'.$SubmittedForm);
 	}
 
-	public static function check_title_exists($listingTitle)
+	public static function check_title_exists($listingTitle, $listingID = false)
 	{
+
 		$API  = new PerchAPI(1.0, 'listing'); 
 		$db	= $API->get('DB');
 
-		$sql = 'SELECT COUNT(*) FROM '.PERCH_DB_PREFIX.'listings WHERE listingSlug='.$db->pdb(PerchUtil::urlify($listingTitle));
+		$sql = 'SELECT COUNT(*) FROM '.PERCH_DB_PREFIX.'listings WHERE listingSlug='.$db->pdb(PerchUtil::urlify($listingTitle)).' AND listingID!='.$db->pdb($listingID);
+
     	$count = $db->get_count($sql);
 
     	PerchUtil::debug($sql);

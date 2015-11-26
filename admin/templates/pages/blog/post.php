@@ -9,7 +9,8 @@
     $title = perch_blog_post_field(perch_get('s'), 'postTitle', true);
     
     perch_layout('header', [
-        'title'=>$title . ' | perchd.io'
+        'title'=>$title . ' | perchd.io',
+        'blog-post' => true
     ]);
 ?>
         

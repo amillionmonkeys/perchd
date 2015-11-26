@@ -22,11 +22,12 @@
         $API  = new PerchAPI(1.0, 'listing');
 
         $defaults = array();
+
         $defaults['template'] = 'listing.html';
 
         if (is_array($opts)) {
             $opts = array_merge($defaults, $opts);
-        }else{
+        } else {
             $opts = $defaults;
         }
 
@@ -36,14 +37,10 @@
 
         if (is_object($Listing)) {
             $Template = $API->get('Template');
-            $Template->set('listing/'.$opts['template'], 'listing');
-
+            $Template->set('listings/'.$opts['template'], 'listing');
             $r = $Template->render($Listing);
             $r = $Template->apply_runtime_post_processing($r);
-
             if ($return) return $r;
-
-            echo $r;
 
         }
 
@@ -63,7 +60,7 @@
         $defaults = array();
         $defaults['template']        = 'comment.html';
         $defaults['count']           = false;
-        $defaults['sort']            = 'commentDateTime';
+        $defaults['sort']            = 'listingDateTime';
         $defaults['sort-order']      = 'ASC';
         $defaults['paginate']        = false;
         $defaults['pagination-var']  = 'comments';
@@ -94,12 +91,13 @@
         echo $r;
     }
 
-    function listings_form($listingType, $opts=false, $return=false)
+    function listings_form($listingType, $listingSlug=false, $opts=false, $return=false)
     {
         $API  = new PerchAPI(1.0, 'listing');
 
         $defaults = array();
         $defaults['template']        = 'listings_form.html';
+        $data = array();
 
         if (is_array($opts)) {
             $opts = array_merge($defaults, $opts);
@@ -109,14 +107,52 @@
 
         $Template = $API->get('Template');
         $Template->set('listings/'.$opts['template'], 'listing');
-        $html = $Template->render(array(
-                'memberID'=>perch_member_get('memberID'),
-                ));
 
-        $html = $Template->apply_runtime_post_processing($html);
+        if($listingSlug){
+             $Listings = new Listings($API);
+             $Listing = $Listings->find_with_status($listingSlug, 'ALL');
+             $data = $Listing->to_array();
+
+        }
+
+        $html = $Template->render($data);
+
+        $html = $Template->apply_runtime_post_processing($html, $data);
 
         if ($return) return $html;
         echo $html;
+    }
+
+    function listings_for_member($listingType, $opts=false, $return=false)
+    {
+        $API  = new PerchAPI(1.0, 'listing');
+        $Session = PerchMembers_Session::fetch();
+
+        $defaults = array();
+        $defaults['template']        = 'listings_list.html';
+        $defaults['count']           = false;
+        $defaults['sort']            = 'listingDateTime';
+        $defaults['sort-order']      = 'ASC';
+        $defaults['paginate']        = false;
+        $defaults['pagination-var']  = 'page';
+        // $defaults['filter']          = 'filter';
+        // $defaults['value']           = $Session->get('memberID');
+
+        if (is_array($opts)) {
+            $opts = array_merge($defaults, $opts);
+        }else{
+            $opts = $defaults;
+        }
+
+        $Listings = new Listings($API);
+
+        $r = $Listings->get_custom($listingType, $opts);
+
+        if ($return) return $r;
+
+        echo $r;
+
+       
     }
 
 

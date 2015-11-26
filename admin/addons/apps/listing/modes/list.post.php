@@ -80,7 +80,7 @@
                 <th><?php echo $Lang->get('Date'); ?></th>
 				<th><?php echo $Lang->get('Title'); ?></th>
 				<th><?php echo $Lang->get('Author'); ?></th>
-
+                <th><?php echo $Lang->get('Status'); ?></th>
 			
             </tr>
         </thead>

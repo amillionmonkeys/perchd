@@ -12,12 +12,11 @@
             <main class="main-body">
                 <?php 
 					if (perch_member_logged_in()) {
-						echo '<h1>Welcome back, '.perch_member_get('first_name').'!</h1>';
+						listings_form('App',  perch_get('s'), false, false);
 					}else{
 						echo '<h1>Hello!</h1>';
 						echo '<p>You are not logged in. Please login or <a href="/user/register">register</a>.</p>';
 					}
-                    
 				?>
             </main>
             <?php perch_layout('user-sidebar'); ?>

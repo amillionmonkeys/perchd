@@ -4,22 +4,33 @@
 		
 		<div>
 			<perch:label for="listingTitle">App Title</perch:label>
-			<perch:input type="text" id="listingTitle" label="Listing Title" required="true" helper="Listings::check_title_exists" />
-			<perch:error for="listingTitle" type="helper"><p>We already have a listing with that title.</p></perch:error>
+			<perch:input type="text" id="listingTitle" label="Listing Title" required="true"  />
+			<perch:error for="listingTitle" type="duplicate"><p>We already have a listing with that title.</p></perch:error>
 		</div>
 		<div>
 			<perch:label for="listingURL">Listing URL</perch:label>
 			<perch:input type="text" id="listingURL" label="Listing URL" required="true" />
 		</div>
+
 		<div>
+			<perch:label for="listingStatus">Listing Status</perch:label>
+			<perch:input type="text" id="listingStatus" label="Listing Status" disabled="true" class="disabled"/>
+		</div>
+
+		<div>
+			<perch:input type="hidden" id="listingID" value="<perch:listing id="listingID" />" />
 			<perch:input type="hidden" id="memberID" value="<perch:listing id="memberID" />" />
 			<perch:input type="hidden" id="listingType" value="listing" />
 			<perch:input type="submit" value="Submit" />
 		</div>
 
+
+
     </fieldset>
 	<perch:success>
-		<p>Thank you. Your entry has been submitted and will appear on the site once approved.</p>
+		<h1>Got it!</h1>
+		<p>Thanks for taking the time to submit your app.</p>
+		<p>If it's a new submission, we'll give it a once over and then approve it. If it's already been approved, you should be able to see your updates already.</p>
 	</perch:success>
 
 </perch:form>

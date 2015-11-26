@@ -2,8 +2,15 @@
 <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title><?php perch_layout_var('title');?></title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">      
+    <?php 
+    if (perch_layout_has('blog-post')) {
+        perch_blog_post_meta(perch_get('s'));
+    }else{
+        echo '<title>' . perch_pages_title(true) . '</title>';
+    } ?>
+    
+        
         <meta name="description" content="Tutorials, inspiration, snippets, articles and insights that will help you make great websites with Perch.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/assets/css/style.css">
