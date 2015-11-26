@@ -3,7 +3,8 @@
     $title = perch_pages_title(true);
 
     perch_layout('header', [
-    	'title'=>$title . ' | perch.io'
+    	'title'=>$title . ' | perch.io',
+        'description'=>'A list of fine and friendly folk who build stuff with Perch day-in-day-out'
     ]);
    
     // perch_layout('homepage-header'); 
