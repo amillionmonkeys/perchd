@@ -29,6 +29,16 @@ class Listing extends PerchAPI_Base
             $out = array_merge($dynamic_fields, $out);
         }
 
+        if (isset($out['memberProperties']) && $out['memberProperties'] != '') {
+            $dynamic_fields = PerchUtil::json_safe_decode($out['memberProperties'], true);
+            if (PerchUtil::count($dynamic_fields)) {
+                foreach($dynamic_fields as $key=>$value) {
+                    $out['perch_'.$key] = $value;
+                }
+            }
+            $out = array_merge($dynamic_fields, $out);
+        }
+
         return $out;
     }
 

@@ -13,6 +13,10 @@
                 <?php 
 					if (perch_member_logged_in()) {
 						echo '<h1>Welcome back, '.perch_member_get('first_name').'!</h1>';
+                        perch_member_form('profile.html');
+                        echo '<br />';
+                        echo '<h2>Update your password</h2>';
+                        perch_member_form('password.html');
 					}else{
 						echo '<h1>Hello!</h1>';
 						echo '<p>You are not logged in. Please login or <a href="/user/register">register</a>.</p>';

@@ -7,6 +7,7 @@
                         <li><a href="/about">About</a></li>
                         <li><a href="/license">License</a></li>
                         <li><a href="/cookies">Cookie Policy</a></li>
+                        <li><a href="/user">Account</a></li>
                     </ul>
                 </div>
                 <div class="footer__column">

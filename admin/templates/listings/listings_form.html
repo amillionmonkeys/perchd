@@ -1,23 +1,62 @@
-<perch:form id="listing" method="post" app="listing">
+<perch:form id="listing" method="post" app="listing" class="form">
 	<fieldset>
 	   <legend>Submit your listing</legend>
 		
-		<div>
-			<perch:label for="listingTitle">App Title</perch:label>
+		<div class="form__row">
+			<perch:label for="listingTitle">Add-on Title</perch:label>
 			<perch:input type="text" id="listingTitle" label="Listing Title" required="true"  />
 			<perch:error for="listingTitle" type="duplicate"><p>We already have a listing with that title.</p></perch:error>
 		</div>
-		<div>
-			<perch:label for="listingURL">Listing URL</perch:label>
-			<perch:input type="text" id="listingURL" label="Listing URL" required="true" />
+
+		<div class="form__row">
+			<perch:label for="addonType">Type</perch:label>
+			<perch:input type="select" id="addonType" options="Apps, Field Types, Dashboard, Plug-ins, Translations, Feathers" required="true" />
 		</div>
 
-		<div>
-			<perch:label for="listingStatus">Listing Status</perch:label>
+		<div class="form__row">
+			<perch:label for="addonSummary">Summary</perch:label>
+			<small>Keep it brief! This is just to get people's attention.</small>
+			<perch:input type="textarea" id="addonSummary" label="Add-on Summary" required="true" />
+		</div>
+
+		<div class="form__row">
+			<perch:label for="addonDescription">Description</perch:label>
+			<perch:input type="textarea" id="addonDescription" label="Add-on Instructions" required="true" />
+		</div>
+
+		<div class="form__row">
+			<perch:label for="addonLicense">Free / Commercial</perch:label>
+			<perch:input type="select" id="addonLicense" options="Free, Commercial" required="true" />
+		</div>
+		
+		<div class="form__row">
+			<perch:label for="addonURL">URL</perch:label>
+			<small>One day in the future, we'll hopefully host addons, but for now please pop them on your server or github and paste the URL below. If you addon is an app, please include example page templates.</small>
+			<perch:input type="text" id="addonURL" label="Add-on URL" required="true" />
+		</div>
+
+		<div class="form__row">
+			<perch:label for="addonInstructions">Instructions for use</perch:label>
+			<small>Please provide some guidance on how to use the addon. If it's an app, please provide guidance on Installation, Page Functions and Template Tags. You might want to include these instructions in a readme.md file within your addon.</small>
+			<perch:input type="textarea" id="addonInstructions" label="Add-on Instructions" required="true" />
+		</div>
+
+		<div class="form__row">
+			<perch:label for="addonInstructions">Ownership</perch:label>
+			<small>In our listing should the app be attributed to you?</small>
+			<perch:input type="select" id="addonOwned" options="Yes, No" required="true" />
+
+		</div>
+		
+		<perch:if exists="listingStatus">
+		<div class="form__row">
+			<perch:label for="listingStatus">Add-on Status</perch:label>
+			<small>Live add-ons are listed in our directory. Pending add-ons are awaiting approved.</small>
 			<perch:input type="text" id="listingStatus" label="Listing Status" disabled="true" class="disabled"/>
 		</div>
+		</perch:if>
 
-		<div>
+		<div class="form__row">
 			<perch:input type="hidden" id="listingID" value="<perch:listing id="listingID" />" />
 			<perch:input type="hidden" id="memberID" value="<perch:listing id="memberID" />" />
 			<perch:input type="hidden" id="listingType" value="listing" />

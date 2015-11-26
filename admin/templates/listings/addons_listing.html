@@ -1,0 +1,13 @@
+<perch:before>
+	<ul>
+</perch:before>
+	<li class="addon-<perch:listing id="addonType" />">
+		<h2><a href="addons/<perch:listing id="listingSlug" type="hidden" />"><perch:listing id="listingTitle" type="text" label="Title" required="true" /></a></h2>
+		<p>By <perch:listing id="first_name" /> <perch:listing id="last_name" /></p>
+		<p><perch:listing id="addonSummary" words="50" append="..."  /></p>
+	</li>
+
+	<hr />
+<perch:after>
+	</ul>
+</perch:after>

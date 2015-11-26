@@ -1,7 +1,14 @@
 <?php
     include('Listings.class.php');
     include('Listing.class.php');
+    include('Members.class.php');
 
+    function members(){
+        $API  = new PerchAPI(1.0, 'perch_members');
+        $Members = new Members();
+        $members = $Members->get_members('active');
+        return $members;
+    }
 
     function listing_form_handler($SubmittedForm)
     {
@@ -44,7 +51,9 @@
 
         }
 
-        return false;
+          if ($return) return $r;
+
+        echo $r;
     }
 
     /**
@@ -55,15 +64,15 @@
      */
     function listings($listingType, $opts=false, $return=false)
     {
-        $API  = new PerchAPI(1.0, 'perch_comments');
+        $API  = new PerchAPI(1.0, 'listing');
 
         $defaults = array();
-        $defaults['template']        = 'comment.html';
+        $defaults['template']        = 'listing.html';
         $defaults['count']           = false;
         $defaults['sort']            = 'listingDateTime';
         $defaults['sort-order']      = 'ASC';
         $defaults['paginate']        = false;
-        $defaults['pagination-var']  = 'comments';
+        $defaults['pagination-var']  = 'page';
 
         if (is_array($opts)) {
             $opts = array_merge($defaults, $opts);

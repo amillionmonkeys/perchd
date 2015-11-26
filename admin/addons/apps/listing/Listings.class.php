@@ -8,7 +8,7 @@ class Listings extends PerchAPI_Factory
 
 	protected $default_sort_column = 'listingDateTime';
 
-	public $static_fields   = array('listingID', 'listingSlug', 'listingTitle', 'listingType', 'listingDateTime', 'listingHTML', 'listingStatus', 'listingDynamicFields');
+	public $static_fields   = array('listingID', 'listingSlug', 'listingTitle', 'listingType', 'listingDateTime', 'listingHTML', 'listingStatus', 'listingDynamicFields', 'memberProperties');
 
 	/**
 	 * Get count of listing of the given type.
@@ -72,11 +72,11 @@ class Listings extends PerchAPI_Factory
 	{
 		$status = strtoupper($status);
 
-		$sql = 'SELECT c.*
-                FROM ' . $this->table .' c
-				WHERE listingSlug='.$this->db->pdb($listingSlug);
+		$sql = 'SELECT *
+                FROM ' . $this->table .'
+				 LEFT JOIN '.PERCH_DB_PREFIX.'members mbr ON '.$this->table.'.memberID=mbr.memberID';
 
-		if ($status != 'ALL') $sql .= ' AND c.listingStatus='.$this->db->pdb($status);
+		if ($status != 'ALL') $sql .= ' AND '.$this->table.'.listingStatus='.$this->db->pdb($status);
 
 		$sql .= ' LIMIT 1';
 
@@ -95,7 +95,7 @@ class Listings extends PerchAPI_Factory
 		$order = array();
         $limit = '';
 
-		$sql = ' * FROM '.$this->table;
+		$sql = ' * FROM '.$this->table.' LEFT JOIN '.PERCH_DB_PREFIX.'members mbr ON '.$this->table.'.memberID=mbr.memberID';
 
 		$where[] = 'listingType='.$this->db->pdb($listingType);
 		if($listingStatus){
@@ -397,6 +397,7 @@ class Listings extends PerchAPI_Factory
         if (isset($opts['skip-template']) && $opts['skip-template']==true) {
             return $listing;
 	    }
+	    
 
 	    // template
 	    if (isset($opts['template'])) {

@@ -1,0 +1,38 @@
+<article class="post">
+    <header class="post__header">
+        <h2 class="post__title">
+         <a href="<perch:listing id="listingURL"/>" rel="bookmark">
+            <perch:listing id="listingTitle" />
+        </a>
+        </h2>
+        <div class="post__byline">
+            <time class="dt-published" datetime="<perch:listing id="listingDateTime" type="date" label="Date" time="true" format="Y-m-d H:i:s" divider-before="Meta information" />">
+                <perch:listing id="listingDateTime" type="date" time="true" format="l dS F Y" /> 
+            </time>
+        </div>
+    </header>
+    
+    <div class="post__content">
+        <p><perch:listing id="addonDescription"/></p>
+    </div>  
+</article>
+
+<hr />
+
+<footer class="post-footer">
+    <div class="author">
+        <div class="author__sidebar">
+            <div class="author__avatar">
+                    <img src="//www.gravatar.com/avatar/<perch:listing id="memberEmail" hash="md5" type="hidden" />?s=280&amp;d=mm" width="140" height="140" alt="<perch:listing id="first_name" /> <perch:listing id="last_name" />" />
+            </div>
+        </div>
+        <div class="author__main">
+            <h2 class="author__name"><perch:listing id="first_name" /> <perch:listing id="last_name" /></h2>
+            <div class="author__bio">
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+</footer>

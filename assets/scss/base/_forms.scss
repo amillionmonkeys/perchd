@@ -19,6 +19,9 @@ select {
   display: block;
   font-family: $base-font-family;
   font-size: $base-font-size;
+  &:disabled {
+    opacity: 0.7;
+  }
 }
 
 legend {
@@ -27,14 +30,18 @@ legend {
 label {
   font-weight: 600;
   margin-bottom: $small-spacing / 2;
-
   &.required::after {
     content: "*";
   }
-
   abbr {
     display: none;
   }
+}
+
+label + small {
+  margin-top: -($small-spacing / 2);
+  margin-bottom: $small-spacing / 2;
+  display: block;
 }
 
 #{$all-text-inputs},
@@ -76,15 +83,17 @@ input[type="radio"] {
   display: inline;
   margin-right: $small-spacing / 2;
 }
-
+input[type="checkbox"] + label {
+  padding-left: 0;
+  margin-right: 1em;
+}
 input[type="file"] {
   padding-bottom: $small-spacing;
   width: 100%;
 }
 
 select {
-  max-width: 100%;
-  width: auto;
+  min-height: 2.5em;
 }
 
 .form-group {

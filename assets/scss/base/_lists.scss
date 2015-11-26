@@ -62,3 +62,10 @@ nav ul,
 form ul {
   list-style-type: none;
 }
+
+.tag-list {
+  @extend .inline-list;
+  li {
+    display: inline-block;
+  }
+}

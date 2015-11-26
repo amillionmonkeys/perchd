@@ -10,12 +10,7 @@
 ?>      
         <div class="outer-container">
             <main class="main-body">
-                <h1>My apps</h1>
-                <?php 
-                    if (perch_member_logged_in()) {
-                        listings_for_member('listing');
-                    }
-                ?>
+                <?php listing(perch_get('s'), array('template'=>'addons_item.html'));?>
             </main>
             <?php perch_layout('user-sidebar'); ?>
         </div>

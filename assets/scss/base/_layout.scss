@@ -11,10 +11,20 @@
 	}
 }
 
+.form__row {
+	@include media($gt-medium) {
+		margin-bottom: 1em;
+	}
+}
+
 .main-body {
 	@include media($gt-medium) {
 		@include span-columns(8);
 	}
+}
+
+.main-body--wide {
+		@include span-columns(12);
 }
 
 .sidebar {
