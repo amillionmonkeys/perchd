@@ -1375,6 +1375,9 @@ fieldset {
     margin-right: 0; }
   .member__content h3, .member__content p {
     margin: 0; }
+  .member__content p {
+    font-size: 14px;
+    font-size: 0.875rem; }
   .member__content .tags {
     margin: 0;
     padding: 0.5em 0;
