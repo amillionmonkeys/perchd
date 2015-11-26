@@ -18,6 +18,11 @@
 		<perch:error for="email" type="required">Please add a your email address</perch:error>
 		<perch:error for="email" type="format">Please check a your email address</perch:error>
 	</div>
+	
+	<div class="form__row">
+        <perch:input type="checkbox" value="1" id="confirm" mailer="confirm_subscribe" />
+		<perch:label for="confirm">Are you happy to occasionally get news and updates about perchd.io?</perch:label>
+	</div>
 
 	<div class="form__row">
 		<perch:label for="country">Country</perch:label>
