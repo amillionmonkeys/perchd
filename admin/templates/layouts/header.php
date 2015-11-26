@@ -35,7 +35,7 @@
                     <ul>
                         <li><a href="/">Blog</a></li>
                         <!--<li><a href="#">Gallery</a></li>-->
-                        <!--<li><a href="#">Snippets</a></li>-->
+                        <li><a href="/perchers">Perchers</a></li>
                         <li><a href="/links">Links</a></li>
                         <li><a href="/archive/videos">Videos</a></li>
                         <li><a href="/about">About</a></li>
