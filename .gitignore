@@ -3,3 +3,4 @@
 config.codekit
 config.local.php
 admin/core
+.DS_Store
