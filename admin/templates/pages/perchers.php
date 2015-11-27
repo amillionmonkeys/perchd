@@ -24,8 +24,14 @@
                             <div class="member__content">
                                 <div class="byline">
                                     <h3>
+                                    <?php if (isset($member['business']) && $member['business'] = 1){?>
+                                         <?php echo isset($member['website']) ? '<a href="'.$member['website'].'" rel="nofollow">'.$member['business_name']. '</a>' : $member['business_name']; ?>
+                                    <?php } else { ?>
+
                                     <?php echo isset($member['website']) ? '<a href="'.$member['website'].'" rel="nofollow">'.$member['first_name']. ' ' . $member['last_name'].'</a>' : $member['first_name']. ' ' . $member['last_name']; ?>
+                                    <?php } ?>
                                         <small><?php echo isset($member['country']) ? '<br />' . $member['country'] : ''; ?></small>
+
                                     </h3>
                                     <p><?php echo isset($member['bio']) ? $member['bio'] : ''; ?></p>
                                     <ul class="tags">
