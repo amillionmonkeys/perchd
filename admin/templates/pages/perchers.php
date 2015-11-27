@@ -24,7 +24,8 @@
                             <div class="member__content">
                                 <div class="byline">
                                     <h3>
-                                    <?php if (isset($member['business']) && $member['business'] = 1){?>
+                                    <?php  $member['business'];
+                                    if (isset($member['business']) && $member['business'] == 1){?>
                                          <?php echo isset($member['website']) ? '<a href="'.$member['website'].'" rel="nofollow">'.$member['business_name']. '</a>' : $member['business_name']; ?>
                                     <?php } else { ?>
 
