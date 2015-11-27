@@ -11,7 +11,7 @@
     } ?>
     
         
-        <meta name="description" content="Tutorials, inspiration, snippets, articles and insights that will help you make great websites with Perch.">
+        <?php perch_page_attributes(); ?>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/assets/css/style.css">
         <script>
