@@ -8,12 +8,13 @@
         perch_blog_post_meta(perch_get('s'));
     }else{
         echo '<title>' . perch_pages_title(true) . '</title>';
+        perch_page_attributes();
     } ?>
-    
-        
-        <?php perch_page_attributes(); ?>
+           
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="shortcut icon" href="/assets/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" href="/assets/apple-touch-icon-152x152-precomposed.png">
         <script>
           (function(d) {
             var config = {
