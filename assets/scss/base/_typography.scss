@@ -56,6 +56,12 @@ h5 {
   }
 }
 
+.post__content h2 + h4 {
+  margin-top: -0.5em;
+  font-weight: $base-font-weight;
+
+}
+
 p {
   margin-bottom: $small-spacing;
 }

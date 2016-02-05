@@ -530,6 +530,10 @@ h5 {
       font-size: 16px;
       font-size: 1rem; } }
 
+.post__content h2 + h4, .post__content legend + h4 {
+  margin-top: -0.5em;
+  font-weight: normal; }
+
 p {
   margin-bottom: 0.75em; }
 
