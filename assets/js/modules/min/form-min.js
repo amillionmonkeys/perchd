@@ -1,0 +1,1 @@
+$(function(){var t=$("#contact");$(t).submit(function(a){var n=$(t).serialize(),i=$(t).attr("id");a.preventDefault(),$.ajax({type:"POST",url:$(t).attr("action"),data:n}).done(function(a){var n=$(a).find("#"+i);$(t).replaceWith(n)})})});
